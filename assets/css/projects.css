@@ -1,0 +1,631 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+  
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(0, 0, 0);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(255, 255, 255);
+}
+
+header{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.a{
+    transition: all 300ms ease;
+}
+
+.logo {
+    width: 100px; /* Adjust width as needed */
+    height:auto;
+    margin: 10px; /* Optional margin for spacing */
+    
+}
+  
+.logo img {
+    /* Additional styles for the logo image itself (optional) */
+    max-width: 100%; /* Ensure image doesn't overflow container */
+    border-radius: 50%;
+}
+  
+.logo:hover {
+    cursor: pointer;
+}
+
+
+#myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 3px solid #0b00a5; /* Add a grey border */
+    border-radius: 15px;
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+section {
+    position: static;
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 2rem 1rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+#Project{
+    position:relative;
+}
+
+.project-title{
+    text-align: center;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+
+.contact-info-upper-container-pub{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+  
+
+
+.publication-filter{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    border: 2.5px solid #81007b;
+    border-radius: 100px;
+    flex-wrap: wrap ;
+    margin: 20px;
+}
+  
+.publication-filter li{
+    margin: 10px;
+    padding: 5px 20px;
+    color: #fdfdfd;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    cursor: pointer;
+    user-select: none;
+}
+  
+  
+.publication-filter-active{
+    color: #000;
+    background-color: #ff7f08;
+    border-radius: 100px;
+    color: #272727;
+}
+  
+.publication-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.publication-container {
+    /* Other styles */
+    animation: fade-in 0.5s ease-in-out;
+}
+  
+@keyframes fade-in {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+.publication-box{
+    width:330px;
+    padding: 15px;
+    border: 1px solid #eeeeee;
+    margin: 20px;
+    border-radius: 10px;
+}
+  
+.publication-box img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+  
+.pub-title{
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #ffffff;
+}
+  
+  
+a{
+    transition: all 300ms ease;
+}
+  
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+    
+    
+}
+  
+a:hover {
+    color: grey;
+    
+    text-decoration-color: rgb(181, 181, 181);
+    scale: 1.05;
+    border-radius: 20px;
+}
+
+
+.badge {
+    position: absolute;
+    background-color: rgb(6, 173, 0);
+    color: rgb(160, 6, 6);
+    padding: 4px 8px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+footer {
+    height: 10vh;
+    margin: 0 1rem;;
+}
+
+
+footer p {
+    text-align: center;
+}
+
+.scrollTop{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 50px;
+    border-radius: 1px solid #000000;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+
+.scrollTop:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+
+/* Pagination links */
+.pagination{
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.pagination a {
+    color: rgb(41, 226, 124);
+    
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+  
+/* Style the active/current link */
+.pagination a.active {
+background-color: dodgerblue;
+color: white;
+}
+  
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+@media screen and (max-width: 400px) {
+    html{
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+    body{       
+        height: fit-content;
+    }
+    .project-title{
+        font-size: 1.75rem;
+        font-weight: 300;
+    }
+    section {
+        margin: 2rem 1rem ;
+        height: 100%;
+        width: fit-content;
+        justify-content: center;
+        width: 100%;
+    }
+    footer{
+        margin-top: 1rem;
+        margin-bottom: 2.5rem;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .publication-filter{
+        
+        justify-content: center;
+        align-items: center;
+        width: 90%;   
+    }
+    .publication-box{
+        width:100%;
+        
+    }
+    .scrollTop{
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+    }
+}
+
+
+@media (min-width: 400px) and (max-width: 500px) {
+    html{
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+    body{       
+        height: fit-content;
+    }
+    .project-title{
+        font-size: 2.5rem;
+        font-weight: 300;
+    }
+    section {
+        margin: 2rem 1rem ;
+        height: 100%;
+        width: fit-content;
+        justify-content: center;
+        width: 100%;
+    }
+    footer{
+        margin-top: 1rem;
+        margin-bottom: 2.5rem;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .publication-filter{
+        
+        justify-content: center;
+        align-items: center;
+        width: 90%;   
+    }
+    .publication-box{
+        width:100%;
+        
+    }
+    .scrollTop{
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+    }
+    
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+    html{
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+    body{       
+        height: fit-content;
+    }
+    .project-title{
+        font-size: 3rem;
+        font-weight: 300;
+    }
+    section {
+        margin: 2rem 1rem ;
+        height: 100%;
+        width: fit-content;
+        justify-content: center;
+        width: 100%;
+    }
+    footer{
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .publication-filter{
+        
+        justify-content: center;
+        align-items: center;
+        width: 90%;   
+    }
+    .publication-box{
+        width:100%;
+        
+    }
+    .scrollTop{
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+    }
+    
+}
+
+
+@media (min-width: 600px) and (max-width: 800px) {
+    html{
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+    body{       
+        height: fit-content;
+    }
+    .project-title{
+        font-size: 4.5rem;
+        font-weight: 300;
+    }
+    section {
+        margin: 2rem 1rem ;
+        height: 100%;
+        width: fit-content;
+        justify-content: center;
+        width: 100%;
+    }
+    footer{
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .publication-filter{
+
+        justify-content: center;
+        align-items: center;
+
+    }
+    .publication-filter li{
+        font-size: 1.5rem;
+    }
+    .publication-box{
+        width:40%;
+        
+    }
+    .scrollTop{
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+    }
+    
+}
+
+@media (min-width: 800px) and (max-width: 1024px) {
+    html{
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+    body{       
+        height: fit-content;
+    }
+    .project-title{
+        font-size: 5.5rem;
+        font-weight: 300;
+    }
+    section {
+        margin: 2rem 1rem ;
+        height: 100%;
+        width: fit-content;
+        justify-content: center;
+        width: 100%;
+    }
+    footer{
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .publication-filter{
+ 
+        justify-content: center;
+        align-items: center;
+
+    }
+ 
+    .publication-box{
+        width:40%;
+        flex-direction: column;
+    }
+  
+    .scrollTop{
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+    }
+    
+}
+
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    html{
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+    }
+    body{       
+        height: fit-content;
+    }
+    .project-title{
+        font-size: 5.5rem;
+        font-weight: 300;
+    }
+    section {
+        margin: 2rem 1rem ;
+        height: 100%;
+        width: fit-content;
+        justify-content: center;
+        width: 100%;
+    }
+    footer{
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .publication-filter{
+    
+        justify-content: center;
+        align-items: center;
+
+    }
+    .publication-filter li{
+        font-size: 1.1rem;
+    }
+    .publication-box{
+        width:40%;
+        flex-direction: column;
+    }
+  
+    .scrollTop{
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    html{
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+    }
+    body{       
+        height: fit-content;
+    }
+    .project-title{
+        font-size: 5.5rem;
+        font-weight: 300;
+    }
+    section {
+        margin: 2rem 1rem ;
+        height: 100%;
+        width: fit-content;
+        justify-content: center;
+        width: 100%;
+    }
+    footer{
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .publication-filter{
+     
+        justify-content: center;
+        align-items: center;
+
+    }
+    .publication-filter li{
+        font-size: 1.2rem;
+    }
+    .publication-box{
+        width:25%;
+        flex-direction: column;
+    }
+  
+    .scrollTop{
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+    }
+}
+
+
+@media (min-width: 1400px) {
+    html{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    body{       
+        height: fit-content;
+    }
+    .project-title{
+        font-size: 6.5rem;
+        font-weight: 300;
+    }
+    section {
+        margin: 2rem 1rem ;
+        height: 100%;
+        width: fit-content;
+        justify-content: center;
+        width: 100%;
+    }
+    footer{
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .publication-box{
+        width:25%;
+        flex-direction: column;
+    }
+  
+    .scrollTop{
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+    }
+}
