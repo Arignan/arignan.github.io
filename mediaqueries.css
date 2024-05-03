@@ -68,7 +68,11 @@
   #projects {
     height: fit-content;
   }
-  
+  #education-experience .eduexp-details-container{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
   
 }
 
@@ -125,6 +129,12 @@
   .text-container {
     text-align: justify;
   }
+  #education-experience .eduexp-details-container{
+    display: flex;
+    flex-direction: column;
+    scale: 1;
+    width: fit-content;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -149,7 +159,8 @@
   #education-experience .eduexp-details-container{
     display: flex;
     flex-direction: column;
-    scale: 1.2;
+    scale: 1;
+    width: fit-content;
   }
 }
 
