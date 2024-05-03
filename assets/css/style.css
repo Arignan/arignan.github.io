@@ -415,9 +415,9 @@ section {
   flex: auto;
   background: white;
   border-radius: 4rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: rgb(53, 53, 53) 0.1rem double;
   border-color: rgb(83, 67, 67);
-  border-width: 0.25rem;
+  border-width: 0.45rem;
   text-align: center;
 }
 
@@ -430,7 +430,6 @@ section {
   border-color: rgb(83, 67, 67);
   border-width: 0.3rem;
   text-align: center;
-  scale: 1.1;
 }
 
 .section-container {
@@ -579,6 +578,7 @@ article .icon {
   text-align: center; /* Center the content */
   color: rgb(127, 189, 27);
   font-size: 1.5rem;
+  height: fit-content;
 }
 
 .modal-content-soft{
@@ -601,7 +601,7 @@ article .icon {
   color: rgb(255, 255, 255);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background: rgb(17, 16, 16);
-  font-size: 2rem;
+  font-size: 1.5rem;
   border: 4px  #000000 solid;
   border-radius: 50px;
   padding: 20px;
@@ -830,11 +830,13 @@ ol.center-list {
   color: #b65d14;
   
 }
+
+
 /*Publications*/
 
 #Publications{
   position: relative;
-  background-color: gray;
+  background-color: rgb(255, 255, 255);
 }
 
 
@@ -941,7 +943,7 @@ ol.center-list {
 
 #contact {
   position: relative;
-  background-color: #000120;
+  background-color: #ffffff;
   
 }
 
@@ -959,7 +961,7 @@ ol.center-list {
   flex-direction: column;
   align-items: start;
   gap: 15px;
-  background: #a32b6d;
+  background: #82818d;
   border-radius: 20px;
   width: fit-content;
 }
@@ -1027,7 +1029,7 @@ ol.center-list {
 }
 
 .contact-right{
-  background: rgb(170, 218, 142);
+  background: rgb(192, 196, 191);
   border-radius: 20px;
   align-items: center;
   justify-content:center;
