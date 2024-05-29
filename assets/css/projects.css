@@ -190,7 +190,7 @@ a:hover {
 .badge {
     position: absolute;
     background-color: rgb(6, 173, 0);
-    color: rgb(160, 6, 6);
+    color: rgb(255, 255, 255);
     padding: 4px 8px;
     text-align: center;
     border-radius: 5px;
