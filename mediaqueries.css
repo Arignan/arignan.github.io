@@ -1,6 +1,5 @@
-
-
-@media  (min-width: 1200px) {
+/* For large screens (desktop and larger) */
+@media (min-width: 1200px) {
   #profile {
     height: 83vh;
     margin-bottom: 6rem;
@@ -14,7 +13,8 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+/* For medium screens (tablets and smaller desktops) */
+@media (max-width: 1200px) {
   #desktop-nav {
     display: none;
   }
@@ -32,13 +32,11 @@
   #profile {
     height: fit-content;
   }
-  #education-experience {
-    height: fit-content;
-  }
+  #education-experience,
   #contact {
     height: fit-content;
   }
-  #contact .contact2{
+  #contact .contact2 {
     scale: 0.7;
     align-items: center;
     margin: 0 1rem;
@@ -58,47 +56,45 @@
   .about-containers {
     margin-top: 0;
   }
-  #Publications{
+  #Publications {
     height: 150vh;
   }
-  #projects .about-containers{
+  #projects .about-containers {
     display: flex;
     flex-direction: column;
   }
-  #projects {
-    height: fit-content;
-  }
-  #education-experience .eduexp-details-container{
+  #education-experience .eduexp-details-container {
     display: flex;
     flex-direction: column;
     width: fit-content;
   }
-  
 }
 
-@media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
+/* For smaller screens (phones and smaller tablets) */
+@media (max-width: 768px) {
+  #desktop-nav {
+    display: none;
   }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
+  #hamburger-nav {
+    display: block;
   }
-  article {
-    font-size: 1rem;
+  #skills,
+  .skills-details-container {
+    margin-top: 2rem;
   }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
+  #profile,
+  .section-container {
+    display: block;
   }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
   }
-  .contact-info-container {
-    margin: 0;
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
   }
   .contact-info-container p,
   .nav-links li a {
@@ -110,26 +106,13 @@
   .logo {
     font-size: 1.5rem;
   }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
-  }
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
   .title {
     font-size: 2rem;
   }
   .text-container {
     text-align: justify;
   }
-  #education-experience .eduexp-details-container{
+  #education-experience .eduexp-details-container {
     display: flex;
     flex-direction: column;
     scale: 1;
@@ -137,26 +120,22 @@
   }
 }
 
-@media screen and (max-width: 500px) {
-  #desktop-nav {
-    display: none;
-  }
-  #hamburger-nav {
-    display: flex;
-  }
-  #skills,
-  .skills-details-container {
-    margin-top: 2rem;
-  }
+/* For very small screens (small phones and very small tablets) */
+@media (max-width: 500px) {
   #profile,
   .section-container {
     display: block;
     height: 120vh;
   }
-  #about{
+  #about {
     height: 180vh;
   }
-  #education-experience .eduexp-details-container{
+  footer,
+  #contact {
+    height: fit-content;
+    margin: 1rem;
+  }
+  #education-experience .eduexp-details-container {
     display: flex;
     flex-direction: column;
     scale: 1;
@@ -164,49 +143,18 @@
   }
 }
 
-@media screen and (max-width: 400px) {
-  #desktop-nav {
-    display: none;
-  }
-  #hamburger-nav {
-    display: flex;
-  }
-  #skills,
-  .skills-details-container {
-    margin-top: 2rem;
-  }
+/* For extremely small screens (extra small phones) */
+@media (max-width: 400px) {
   #profile,
   .section-container {
     display: block;
     height: 130vh;
   }
-  #about{
+  #about {
     height: 190vh;
   }
-  #profile{
-    height: fit-content;
-  }
-  #skills{
-    height: fit-content;
-  }
-  #education-experience{
-    height: fit-content;
-  }
-  #projects {
-    height: fit-content;
-  }
-  #Publications{
-    height: fit-content;
-  }
-  #contact{
+  footer {
     height: fit-content;
     margin: 1rem;
   }
-  footer{
-    height: fit-content;
-    margin: 1rem;
-  }
-  
 }
-
-

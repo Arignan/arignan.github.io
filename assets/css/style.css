@@ -12,7 +12,6 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: white;
-  
 }
 
 html {
@@ -104,9 +103,24 @@ a:hover {
 
 /* HAMBURGER MENU */
 
+#desktop-nav, #hamburger-nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* To make sure it stays on top of other content */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+.nav-links a.active {
+  text-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 20px rgba(0, 255, 255, 1);
+  color: #00FFFF; /* Optional: Set text color to match the glow */
+}
+
+
 #hamburger-nav {
-  display: none;
+  display: none; /* Hidden by default for larger screens */
   height: auto;
+  
 }
 
 .hamburger-menu {
