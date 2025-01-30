@@ -408,7 +408,11 @@ section {
 
 #about {
   position: relative;
-  background-color: rgb(3, 3, 68);
+  background-color: #000023;
+  padding: 3rem;
+  margin: 15px 15px;
+  border-radius: 50px;
+  padding-top: 120px;
 }
 
 #about .section-container{
