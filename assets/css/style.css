@@ -138,6 +138,7 @@ a:hover {
   display: none; /* Hidden by default for larger screens */
   height: auto;
   
+  
 }
 
 /* When scrolled, change background color */
@@ -163,6 +164,7 @@ a:hover {
   height: 24px;
   width: 30px;
   cursor: pointer;
+  
 }
 
 .hamburger-icon:hover{
