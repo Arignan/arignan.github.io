@@ -1,111 +1,138 @@
-// Function to toggle the visibility of the menu when the hamburger icon is clicked
+// Function to toggle the menu visibility when the hamburger icon is clicked
 function toggleMenu() {
   // Select the menu and the hamburger icon elements
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
 
-  // Check if the menu is currently visible (if it has the 'open' class)
-  const isMenuVisible = menu.classList.contains("open");
-
-  // Toggle the 'open' class on the menu and icon, which shows or hides the menu
+  // Toggle the 'open' class on both the menu and icon
   menu.classList.toggle("open");
   icon.classList.toggle("open");
 
-  // If the menu is now visible, add an event listener to close the menu if the user clicks outside it
-  if (!isMenuVisible) {
+  // If the menu is now open, add an event listener to close it when clicking outside
+  if (menu.classList.contains("open")) {
     document.addEventListener("click", closeMenuOnClickOutside);
   } else {
-    // If the menu is no longer visible, remove the event listener for clicking outside
+    // If the menu is closed, remove the event listener to avoid unnecessary processing
     document.removeEventListener("click", closeMenuOnClickOutside);
   }
 }
 
-// This function closes the menu when the user clicks outside the menu or the icon
+// Function to close the menu when clicking outside of it
 function closeMenuOnClickOutside(event) {
-  // Select the menu and icon elements again
+  // Select the menu and the hamburger icon
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
 
-  // If the menu is not open, do nothing
+  // Check if the menu is currently open
   if (!menu.classList.contains("open")) return;
 
-  // If the click is outside the menu and the icon, close the menu
+  // If the user clicks outside both the menu and the icon, close the menu
   if (!menu.contains(event.target) && !icon.contains(event.target)) {
     menu.classList.remove("open");
     icon.classList.remove("open");
 
-    // Remove the event listener for clicking outside after the menu is closed
+    // Remove the event listener since the menu is now closed
     document.removeEventListener("click", closeMenuOnClickOutside);
   }
 }
 
-// Allow the user to close the menu by pressing the Escape key for accessibility
+// Function to close the menu when the user presses the Escape key
 document.addEventListener("keydown", (event) => {
-  // If the Escape key is pressed
+  // Check if the pressed key is "Escape"
   if (event.key === "Escape") {
-    // Select the menu and icon elements
+    // Select the menu and icon
     const menu = document.querySelector(".menu-links");
     const icon = document.querySelector(".hamburger-icon");
 
-    // If the menu is open, close it by removing the 'open' class
+    // If the menu is open, close it
     if (menu.classList.contains("open")) {
       menu.classList.remove("open");
       icon.classList.remove("open");
 
-      // Remove the event listener for clicking outside the menu since the menu is closed
+      // Remove the event listener for clicking outside
       document.removeEventListener("click", closeMenuOnClickOutside);
     }
   }
 });
 
-// Change the background color of the navigation bar when the user scrolls
-window.addEventListener("scroll", () => {
-  const nav = document.querySelector("#hamburger-nav");
-  
-  // If the page is scrolled down, change the background color
-  if (window.scrollY > 50) {
-    nav.style.backgroundColor = "#333"; // Dark background when scrolled
-  } else {
-    nav.style.backgroundColor = "transparent"; // Transparent background at the top
-  }
-});
+// Function to close the menu when a menu link is clicked (important for mobile users)
+document.querySelectorAll(".menu-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    // Select the menu and icon
+    const menu = document.querySelector(".menu-links");
+    const icon = document.querySelector(".hamburger-icon");
 
-// Add smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    target.scrollIntoView({ behavior: "smooth" });
+    // Close the menu when a link is clicked
+    menu.classList.remove("open");
+    icon.classList.remove("open");
   });
 });
 
-// Highlight the active menu item as the user scrolls through sections
+// Function to change the navigation bar background on scroll
 window.addEventListener("scroll", () => {
-  const sections = document.querySelectorAll("section");
-  const links = document.querySelectorAll(".nav-links a");
+  // Select the navbar element
+  const nav = document.querySelector("#hamburger-nav");
 
-  sections.forEach((section, index) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
+  // If the page is scrolled more than 50 pixels, change the background color
+  if (window.scrollY > 50) {
+    nav.classList.add("scrolled"); // Adds a class to change styling
+  } else {
+    nav.classList.remove("scrolled"); // Removes the class when at the top
+  }
+});
 
-    // Highlight the active link based on scroll position
-    if (window.scrollY >= sectionTop - sectionHeight / 2 && window.scrollY < sectionTop + sectionHeight) {
-      links.forEach(link => link.classList.remove("active"));
-      links[index].classList.add("active");
+// Function to enable smooth scrolling for anchor links (links starting with #)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent the default jumping behavior
+
+    // Get the target section based on the link's href attribute
+    const target = document.querySelector(this.getAttribute("href"));
+
+    // Scroll smoothly to the target section if it exists
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
     }
   });
 });
 
-// Add click event to each link for the glow effect
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
+// Function to highlight the active menu item based on scroll position
+window.addEventListener("scroll", () => {
+  // Select all sections and navigation links
+  const sections = document.querySelectorAll("section");
+  const links = document.querySelectorAll(".nav-links a");
+
+  let activeIndex = -1; // Variable to store the index of the active section
+
+  sections.forEach((section, index) => {
+    // Calculate the position of the section relative to the viewport
+    const sectionTop = section.offsetTop - window.innerHeight / 2;
+    const sectionBottom = sectionTop + section.offsetHeight;
+
+    // Check if the user is in the section
+    if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+      activeIndex = index;
+    }
+  });
+
+  // If an active section is found, highlight the corresponding menu link
+  if (activeIndex !== -1) {
+    links.forEach(link => link.classList.remove("active")); // Remove 'active' class from all links
+    links[activeIndex].classList.add("active"); // Add 'active' class to the current section's link
+  }
+});
+
+// Function to highlight a menu item when clicked (glow effect)
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
     // Remove 'active' class from all links
-    document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('active'));
-    
-    // Add the 'active' class to the clicked link for glow effect
-    link.classList.add('active');
+    document.querySelectorAll(".nav-links a").forEach(l => l.classList.remove("active"));
+
+    // Add 'active' class to the clicked link
+    link.classList.add("active");
   });
 });
+
 
 function scroolToTop(){
   window.scrollTo(0,0);
