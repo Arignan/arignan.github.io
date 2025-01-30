@@ -70,21 +70,28 @@
         <p>
           <div class="typing-animation">
             <div class="wrapper">
-              <span class="multiText">Data Scientist</span>
+              <span class="multiText"></span>
             </div>
           </div>
           <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
           <script>
-              var typingEffect = new Typed(".multiText",{
-                strings : ["Data Scientist", "Data Analyst", "Artificial Intelligent/<br> Machine learning <br>Engineer"],
-                loop : true,
-                typeSpeed : 60,
-                backspeed : 60,
-                startDelay : 100,
-                backDelay : 1500
-                
-
-              })
+              var typingEffect = new Typed(".multiText", {
+                  strings: [
+                    "Data Scientist &amp;<br> Analyst", 
+                    "Artificial Intelligence / <br> Machine Learning <br> Engineer", 
+                    "Software Engineer"
+                  ],
+                  loop: true,
+                  typeSpeed: 80,         // Speed up the typing
+                  backSpeed: 50,         // Speed up the backspacing
+                  startDelay: 500,       // Delay before the animation starts
+                  backDelay: 1500,       // Delay before it starts backspacing
+                  showCursor: true,      // Show cursor
+                  cursorChar: "|",       // Custom cursor character
+                  fadeOut: true,         // Make the typing fade out when erased
+                  fadeOutClass: "typed-fade-out", // Custom class for fade-out effect
+                  fadeOutDelay: 500      // Fade out duration
+                });
           </script>
         </p>
         <p style="font-family: 'Courier New', Courier, monospace; font-size: 25px; font-weight:750; color: rgb(68, 51, 29);">Welcome! I'm a wearer of many hats in the <br>

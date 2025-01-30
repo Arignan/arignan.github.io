@@ -317,7 +317,7 @@ section {
   font-weight: 800;
   font-size: 1.5rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  
+  white-space: nowrap; /*Prevents the text from wrapping to the next line*/
   text-transform: capitalize;
   color: rgba(255, 255, 255, 0.9);
   
@@ -330,25 +330,24 @@ section {
 
 .wrapper {
   text-align: center; /* Center align the text within the wrapper */
+  display: inline-block;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #3089dd;
 }
 
 .typing-animation {
+  display: flex;
   position: relative;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   height: 120px; /* Set height to fit content */
 }
 
-
-
 #about table {
   margin: 0 auto;  /* Centers the table horizontally */
   
 }
-
-
-
-
 
 /* ICONS */
 
