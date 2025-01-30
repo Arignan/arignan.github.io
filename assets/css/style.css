@@ -9,9 +9,11 @@
   scroll-behavior: smooth;
 }
 
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: white;
+  padding-top: 12vh;
 }
 
 html {
