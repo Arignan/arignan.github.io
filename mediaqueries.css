@@ -11,6 +11,7 @@
   #projects {
     height: fit-content;
   }
+  
 }
 
 /* For medium screens (tablets and smaller desktops) */
@@ -76,7 +77,14 @@
     display: none;
   }
   #hamburger-nav {
-    display: block;
+    display: flex;
+  }
+  .menu-links {
+    width: 100%; /* Make menu full-width */
+    text-align: center;
+  }
+  .menu-links a {
+    padding: 15px;
   }
   #skills,
   .skills-details-container {

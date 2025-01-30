@@ -35,8 +35,11 @@ a,
   transition: all 300ms ease;
 }
 
-/* DESKTOP NAV */
+/* ===============
+   DESKTOP NAVIGATION
+   =============== */
 
+/* General Navigation Styling */
 nav,
 .nav-links {
   display: flex;
@@ -49,9 +52,10 @@ nav {
   
 }
 
+/* Navigation Links Styling */
 .nav-links {
   gap: 2rem;
-  
+  display: flex;
   list-style: none;
   font-size: 1.6rem;
   background-color: rgb(0, 0, 0);
@@ -62,23 +66,25 @@ nav {
 
 .nav-links a{
   color: rgb(255, 255, 255);
+  text-decoration: none;
+  
 }
 
 .nav-links a.active {
-  color: #ffcc00; /* Change color for active menu item */
-  font-weight: bold;
-  text-shadow: 0px 0px 10px rgba(255, 204, 0, 0.8); /* Glow effect */
+  text-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 20px rgba(0, 255, 255, 1); /* Glow effect */
+  color: #00FFFF; /* Optional: Set text color to match the glow */
+  
 }
 
 .nav-links li{
   margin: 0.75rem;
 }
 
+/* General Link Styling */
 
 a {
   color: black;
   text-decoration: none;
-  text-decoration-color: white;
   
 }
 
@@ -87,14 +93,16 @@ a:hover {
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: rgb(181, 181, 181);
-  scale: 1.2;
+  scale: (1.2);
 }
+
+/* Logo Styling */
 
 .logo {
   width: 100px; /* Adjust width as needed */
   height:auto;
   margin-right: 5px; /* Optional margin for spacing */
-  
+  cursor: pointer;
 }
 
 .logo img {
@@ -107,7 +115,11 @@ a:hover {
   cursor: pointer;
 }
 
-/* HAMBURGER MENU */
+/* ===============
+    HAMBURGER MENU
+    =============== */
+
+/* Make sure navigation remains on top */
 
 #desktop-nav, #hamburger-nav {
   position: fixed;
@@ -115,13 +127,10 @@ a:hover {
   top: 0;
   left: 0;
   z-index: 1000; /* To make sure it stays on top of other content */
-  transition: background-color 0.3s; /* Smooth background color transition */
-}
-.nav-links a.active {
-  text-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 20px rgba(0, 255, 255, 1);
-  color: #00FFFF; /* Optional: Set text color to match the glow */
+  transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
 }
 
+/* Hamburger Navigation (Hidden by Default) */
 
 #hamburger-nav {
   display: none; /* Hidden by default for larger screens */
@@ -129,11 +138,13 @@ a:hover {
   
 }
 
+/* When scrolled, change background color */
 #hamburger-nav.scrolled {
   background-color: #333;
   transition: background-color 0.3s ease-in-out;
 }
 
+/* Hamburger Menu Container */
 .hamburger-menu {
   position: relative; /* Needed for layering elements */
   display: inline-block;
@@ -142,8 +153,7 @@ a:hover {
   transition: all 0.3s ease-in-out; /* Optional transition for smooth appearance */
 }
 
-
-
+/* Hamburger Icon */
 .hamburger-icon {
   display: flex;
   flex-direction: column;
@@ -153,17 +163,34 @@ a:hover {
   cursor: pointer;
 }
 
+
+
 .hamburger-icon:hover{
-  scale: 1.1;
+  scale: (1.1);
 }
 
 .hamburger-icon span {
   width: 100%;
   height: 2px;
   background-color: rgb(255, 255, 255);
-  transition: all 0.3 ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
+/* When menu is opened, animate into an 'X' */
+/* When menu is opened, animate into an 'X' */
+.hamburger-icon.open span:first-child {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0; /* Middle line disappears */
+}
+
+.hamburger-icon.open span:last-child {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Menu Links Styling */
 .menu-links {
   position: absolute;
   top: 100%;
@@ -174,6 +201,7 @@ a:hover {
   overflow: hidden;
   display: none; /* Initial state (hidden) */
   transition: all 0.3 ease-in-out;
+  border-radius: 50px;
 }
 
 .menu-links a {
@@ -190,6 +218,7 @@ a:hover {
   list-style: none;
 }
 
+/* When menu is open */
 .menu-links.open {
   max-height: 400px;
   display: block; /* Display when open */
@@ -199,30 +228,6 @@ a:hover {
   overflow: hidden; /* Prevent content overflow when closed */
 }
 
-
-.hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
-}
-
-.hamburger-icon.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
 
 /* SECTIONS */
 
