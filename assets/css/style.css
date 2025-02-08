@@ -492,190 +492,189 @@ section {
 
 /* skills SECTION */
 
-#skills {
-  position: relative;
-  margin-bottom: 8rem;
-  
+/*-----------------------------------------------------
+  Container & Header
+-----------------------------------------------------*/
+#skills{
+  margin: 0px;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #121212;
+  color: #e0e0e0;
+
 }
-
-.skills-sub-title {
-  color: rgb(85, 85, 85);
-  font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
-  
+.skills-container {
+  max-width: 100%;
+  margin: 2rem;
+  padding: 2rem;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
-
-.skills-details-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 1rem 5rem;
-}
-
-.about-containers-2 {
-  gap: 1rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-}
-
-.article-container {
-  display: flex;
-  text-align: initial;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2.5rem;
-  justify-content: space-around;
-  position: relative;
-}
-
-
-.domain-skl1,
-.domain-skl2,
-.domain-skl3,
-.tec-skl1,
-.tec-skl2,
-.tec-skl3,
-.tol-skl1,
-.tol-skl2,
-.tol-skl3,
-.sft-skl1,
-.sft-skl2,
-.sft-skl3,
-.oth-skl1,
-.oth-skl2,
-.oth-skl3{
+.skills-header {
   text-align: center;
+  margin-bottom: 2rem;
 }
-
-
-
-
-
-article {
+.skills-header h2 {
+  font-size: 2.5rem;
+  color: #00bcd4;
+  margin-bottom: 0.5rem;
+}
+.skills-header p {
+  font-size: 1.1rem;
+  color: #b0b0b0;
+}
+/*-----------------------------------------------------
+  Grid Layout for Skill Categories
+-----------------------------------------------------*/
+.skills-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  .skills-categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/*-----------------------------------------------------
+  Skill Category Cards
+-----------------------------------------------------*/
+.skill-category {
+  background: #2a2a2a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+.category-title {
+  color: #00bcd4;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #00bcd4;
+  font-size: 1.3rem;
+}
+/* Make Other Skills span full width */
+.otherskills {
+  grid-column: 1 / -1;
+}
+/*-----------------------------------------------------
+  Collapsible Sections (for Sub-Categories & Other Skills)
+-----------------------------------------------------*/
+.sub-category {
+  margin-bottom: 1.5rem;
+}
+.collapsible-header {
+  cursor: pointer;
   display: flex;
-  width: 10rem;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
+  font-size: 1.1rem;
+  color: #00bcd4;
+  margin-bottom: 0.5rem;
 }
-
-
-
-article .icon {
+.collapsible-header i {
+  transition: transform 0.3s ease;
+}
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+.sub-category.open .collapsible-content,
+.otherskills.open .collapsible-content {
+  max-height: 1000px;
+}
+.sub-category.open .collapsible-header i,
+.otherskills.open .collapsible-header i {
+  transform: rotate(180deg);
+}
+/*-----------------------------------------------------
+  Skill Items
+-----------------------------------------------------*/
+.skill-item {
+  display: flex;
+  align-items: center;
+  margin: 0.8rem 0;
+  padding: 0.8rem;
+  background: #1e1e1e;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  border-left: 4px solid transparent;
   cursor: default;
 }
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
-  align-content: center;
+.skill-item:hover {
+  background: #333;
+  transform: scale(1.02);
+  border-left: 4px solid #00bcd4;
 }
-
-.modal-button{
-  font-weight: 400;
-  border-radius: 0.3rem; 
-  background-color: #080077; 
-  color: #80f521;
-}
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 10px  #006b1b;
-  border-style: double;
-  border-radius: 15px;
-  width: fit-content; /* Could be more or less, depending on screen size */
-  text-align: center; /* Center the content */
-}
-
-
-
-
-
-
-
-
-.modal-content-tool {
-  background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsJCQcJCQcJCQkJCwkJCQkJCQsJCwsMCwsLDA0QDBEODQ4MEhkSJRodJR0ZHxwpKRYlNzU2GioyPi0pMBk7IRP/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCAC0ALIDASIAAhEBAxEB/8QAGgABAQEBAQEBAAAAAAAAAAAAAAECAwQFB//EACgQAQEAAgEDAwQCAwEAAAAAAAABAhESITFRA0FhE3GBoZHwIsHRsf/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwD8iAAABQUEUUENKoJo0uqavyDOhrSAgqAgqAgqAAAAAAAKigKigNElrrjh2BiYW93XH0vh1xwjvjgzR5p6Xwv0nrmEXhCq8F9L4c8vTfQywcssO5UeCyxK9OWDhljY0MIoCAAgAAAAACooKsiR0xgNY4vRhi54x3xZHTDF2xjGLrPuirIuosp+Qc8o5ZR3v3c8geXPFwyxevJwyio8uU0w7ZRyvdoZABAAAAAAFRQajri5x0xQdsXbFwxdsag7Y10lcZXSVFdZf7s5McjkDVrnlVt/u2Lf71BjJxydMq5ZVUcsnLJ1ycslHMWoogAAAAADUZWA3HSOcbiDrK6S9nGVuUHeVqVxlblQddrty5HIVu1m1m5M2iLa52ra52qM1zrdYtBmsrUUQAAAAABYig1Gow1KDpK3K5StSoOsrW3KVdg67NuezaDe0tY2lqjVrFpazaBaxVrNURBAAAAAAAFQBpYyA3tqVzjQN7XbntdoN7Ns7Ng1tNs7Ngu02m0oFqCKCAAAAAAAAAAqAKu0Aa2MgNbNoAuzaICoACAAAAAAAAAAGqaoAvHLw1PTz8AwrpPRz76PpZT+0HIdPp5H06DBtv6WXg+nYDCOl9OpwyBga4ZeEuNgILqpoANAAAAAOnBeDc+1an2oMz046T0p+Gsa1LPcDH054jpMMZO0+dsc5Dn17bQdP8J2m/N10/CZSa3br8dU5Y999f2zcpQZt+0+/dJrzP5XeOu27fheMl3/ABJ2BOnTps/H5OV9u642WXlLvYJcNrwxa5zrU5eP+Azwk6/6Zvpy/C3Odd76+Elx379fIOWXp67as/bnrT07w37pbiDzaR33h8OeXHfTso50buk6Az18CgO24ctue6bB15aOfy5bUG+Xxtvlr2/bjurug7cvtupbl7zpr205zK+Fufx9u6Drjb13jYzlllvvrXskz9v+l677dYCcsunVZlazxy76/fb+TV8UF55e3+kuec90u/CVRrnle9rO7335Sdygu75pyy8sgLdptEAqKdAQAFoAL4UADuAKQAa8fc8/GwA3V3/6AHuzfcATygAvsgAeEAEAAAB//9k=);
-  background-repeat: no-repeat;  /* Optional: Controls how the image repeats */
-  background-position: center;  /* Optional: Controls the image position */
-  background-size: cover;      /* Optional: Controls the image size */
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 4px  #ff0000;
-  border-style: dashed;
-  border-radius: 15px;
-  width: fit-content; /* Could be more or less, depending on screen size */
-  text-align: center; /* Center the content */
-  color: rgb(127, 189, 27);
-  font-size: 1.5rem;
-  height: fit-content;
-}
-
-.modal-content-soft{
-  margin: 0 auto; /* Center the table */
+.skill-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  color: rgb(255, 255, 255);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background: rgb(0, 0, 0);
+  color: #00bcd4;
+  font-size: 1.5rem;
+}
+.skill-details {
+  flex: 1;
+}
+.skill-name {
+  font-weight: 500;
+  color: #e0e0e0;
+  font-size: 1.1rem;
+}
+/*-----------------------------------------------------
+  Responsive Adjustments
+-----------------------------------------------------*/
+@media (max-width: 768px) {
+  .skills-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  .skills-header h2 {
+    font-size: 2rem;
+  }
+  .category-title {
+    font-size: 1.2rem;
+  }
+  .skill-name {
+    font-size: 0.95rem;
+  }
+}
+
+.floating-emoji {
+  position: absolute;
   font-size: 2rem;
-  border: 4px  #000ba1 solid;
-  border-radius: 50px;
-  padding: 30px;
-  width: fit-content; /* Could be more or less, depending on screen size */
-  text-align: center; /* Center the content */
+  pointer-events: none;
+  animation: bounce 3s ease-in-out infinite;
+  background: transparent;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1); /* Start and end at original position and scale */
+  }
+  50% {
+    transform: translateY(-10px) scale(1.13); /* Move up slightly and scale up subtly */
+  }
 }
 
-.modal-content-tech{
-  margin: 0 auto; /* Center the table */
-  justify-content: center;
-  color: rgb(255, 255, 255);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background: rgb(17, 16, 16);
-  font-size: 1.5rem;
-  border: 4px  #000000 solid;
-  border-radius: 50px;
-  padding: 20px;
-  width: fit-content; /* Could be more or less, depending on screen size */
-  text-align: center; /* Center the content */
-}
+.floating-emoji:nth-child(2) { top: 20%; right: 10%; animation-delay: -1s; }
+.floating-emoji:nth-child(3) { top: 25%; left: 15%; animation-delay: -2s; }
 
-.modal-content-tech td {
-  padding: 20px; /* Add padding for spacing */
-}
-
-
-
-/* The Close Button */
-.close {
-  color: rgb(122, 39, 39);
-  float: right;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: rgb(122, 39, 39);
-  text-decoration: none;
-  cursor: pointer;
-}
-
-
-
+.floating-emoji:nth-child(5) { top: 50%; left: 5%; animation-delay: -3s; }
+.floating-emoji:nth-child(6) { top: 60%; right: 5%; animation-delay: -4s; }
+.floating-emoji:nth-child(7) { top: 70%; left: 15%; animation-delay: -5s; }
+.floating-emoji:nth-child(8) { top: 85%; right: 10%; animation-delay: -6s; }
+.floating-emoji:nth-child(9) { top: 90%; left: 5%; animation-delay: -7s; }
 
 /*Education & Experience*/
 #education-experience {

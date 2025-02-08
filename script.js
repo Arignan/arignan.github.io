@@ -139,7 +139,15 @@ function scroolToTop(){
 }
 
 
-
+// Enable collapsible functionality for all sections with a .collapsible-header
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
+  collapsibleHeaders.forEach(header => {
+    header.addEventListener('click', function() {
+      this.parentElement.classList.toggle('open');
+    });
+  });
+});
 
 
 // Get the button that opens the modal
