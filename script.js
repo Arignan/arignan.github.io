@@ -150,6 +150,228 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Sample project data (replace these with your actual projects)
+  const projectsData = [
+    {
+      image: 'assets/img/Robotics-Engineering.webp',
+      name: 'Project 1',
+      description: 'This is a description for Project 1.',
+      link: 'https://example.com/project1'
+    },
+    {
+      image: 'projects/Credit-Card-Financial-Weekly-Dashboard-Report-project-PBI.png',
+      name: 'Credit card financial dashboard using PowerBI',
+      description: 'Developed an interactive dashboard using transaction and customer data from a SQL database, to provide real-time insights',
+      link: 'https://github.com/Arignan/Credit-Card-Financial-Weekly-Dashboard-Report-project-PBI'
+    },
+    {
+      image: 'projects/Evaluating Solutions to Ameliorate the Impact of Food Deserts in Brooklyn Using AI.jpg',
+      name: 'Project 3',
+      description: 'This is a description for Project 3.',
+      link: 'https://example.com/project3'
+    },
+    {
+      image: 'projects/Nasa exoplanet watch.jpg',
+      name: 'Project 4',
+      description: 'This is a description for Project 4.',
+      link: 'https://example.com/project4'
+    },
+    {
+      image: 'projects/omdena glasgow tourism.jpg',
+      name: 'Project 5',
+      description: 'This is a description for Project 5.',
+      link: 'https://example.com/project5'
+    },
+    {
+      image: 'images/project6.jpg',
+      name: 'Project 6',
+      description: 'This is a description for Project 6.',
+      link: 'https://example.com/project6'
+    },
+    // Add more projects as needed...
+    {
+      image: 'images/project7.jpg',
+      name: 'Project 7',
+      description: 'This is a description for Project 7.',
+      link: 'https://example.com/project7'
+    },
+    {
+      image: 'images/project8.jpg',
+      name: 'Project 8',
+      description: 'This is a description for Project 8.',
+      link: 'https://example.com/project8'
+    }
+    // ... and so on.
+    ,
+    {
+      image: 'images/project1.jpg',
+      name: 'Project 9',
+      description: 'This is a description for Project 1.',
+      link: 'https://example.com/project1'
+    },
+    {
+      image: 'images/project2.jpg',
+      name: 'Project 10',
+      description: 'This is a description for Project 2.',
+      link: 'https://example.com/project2'
+    },
+    {
+      image: 'images/project3.jpg',
+      name: 'Project 11',
+      description: 'This is a description for Project 3.',
+      link: 'https://example.com/project3'
+    },
+    {
+      image: 'images/project4.jpg',
+      name: 'Project 12',
+      description: 'This is a description for Project 4.',
+      link: 'https://example.com/project4'
+    },
+    {
+      image: 'images/project5.jpg',
+      name: 'Project 13',
+      description: 'This is a description for Project 5.',
+      link: 'https://example.com/project5'
+    },
+    {
+      image: 'images/project6.jpg',
+      name: 'Project 14',
+      description: 'This is a description for Project 6.',
+      link: 'https://example.com/project6'
+    },
+    // Add more projects as needed...
+    {
+      image: 'images/project7.jpg',
+      name: 'Project 15',
+      description: 'This is a description for Project 7.',
+      link: 'https://example.com/project7'
+    },
+    {
+      image: 'images/project8.jpg',
+      name: 'Project 16',
+      description: 'This is a description for Project 8.',
+      link: 'https://example.com/project8'
+    }
+  ];
+
+  // Number of projects per page (2 rows × 3 columns = 6)
+  const projectsPerPage = 6;
+  const pages = [];
+  for (let i = 0; i < projectsData.length; i += projectsPerPage) {
+    pages.push(projectsData.slice(i, i + projectsPerPage));
+  }
+
+  // Get the projects track container
+  const projectsTrack = document.getElementById("projectsTrack");
+
+  // Create DOM elements for each page and its project cards
+  pages.forEach(pageProjects => {
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('projects-wrapper');
+
+    pageProjects.forEach(project => {
+      // Create the project card
+      const card = document.createElement('div');
+      card.classList.add('project-card');
+
+      // Create the link element wrapping the image
+      const link = document.createElement('a');
+      link.href = project.link;
+      link.target = '_blank'; // Open the project in a new tab
+
+      // Create the image element
+      const img = document.createElement('img');
+      img.src = project.image;
+      img.alt = project.name;
+      img.classList.add('project-image');
+
+      link.appendChild(img);
+
+      // Create the content container (for title and description)
+      const content = document.createElement('div');
+      content.classList.add('project-content');
+
+      // Create the title element
+      const title = document.createElement('h4');
+      title.classList.add('aproject-title');
+      title.textContent = project.name;
+
+      // Create the description element
+      const description = document.createElement('p');
+      description.classList.add('project-description');
+      description.textContent = project.description;
+
+      // Append title and description to content
+      content.appendChild(title);
+      content.appendChild(description);
+
+      // Append the link (with image) and content to the card
+      card.appendChild(link);
+      card.appendChild(content);
+
+      // Append the card to the page wrapper
+      wrapper.appendChild(card);
+    });
+
+    // Append the page wrapper to the projects track
+    projectsTrack.appendChild(wrapper);
+  });
+
+  // Navigation Code for Carousel
+  const prevButton = document.getElementById("prev-button");
+  const nextButton = document.getElementById("next-button");
+  const container = document.querySelector(".aprojects-container");
+
+  // Disable auto-scroll animation (if any) so manual navigation works
+  projectsTrack.style.animation = "none";
+
+  // Get all the page wrappers created above
+  const pageWrappers = projectsTrack.querySelectorAll(".projects-wrapper");
+  let currentPage = 0;
+  const totalPages = pageWrappers.length;
+
+  // Calculate the width of one page (assumed to be the width of the container)
+  let pageWidth = container.offsetWidth;
+
+  // Function to update the carousel transform based on the current page
+  function updateCarousel() {
+    projectsTrack.style.transform = `translateX(-${currentPage * pageWidth}px)`;
+  }
+
+  // Next button: Move to the next page (or loop back to the first)
+  nextButton.addEventListener("click", function () {
+    if (currentPage < totalPages - 1) {
+      currentPage++;
+    } else {
+      currentPage = 0;
+    }
+    updateCarousel();
+  });
+
+  // Previous button: Move to the previous page (or loop to the last)
+  prevButton.addEventListener("click", function () {
+    if (currentPage > 0) {
+      currentPage--;
+    } else {
+      currentPage = totalPages - 1;
+    }
+    updateCarousel();
+  });
+
+  // Update page width on window resize to keep responsiveness
+  window.addEventListener("resize", function () {
+    pageWidth = container.offsetWidth;
+    updateCarousel();
+  });
+});
+
+
+
+
+
+
+
 // Get the button that opens the modal
 var btn = document.querySelectorAll("button.modal-button");
 
