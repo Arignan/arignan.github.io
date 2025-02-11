@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/style.scss" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <!--Light-Box-css-------------------------------->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.css">
     <!--fav-icon------------------------------------->
@@ -59,10 +63,10 @@
           </div>
           <div class="menu-links">
             <ul class="nav-links"></ul>
-            <li><a href="#profile">Home</a></li> <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li> <li><a href="#education-experience">Education & <br>Experience</a></li>
-            <li><a href="#projects">Projects/Portfolio</a></li> <li><a href="#Publications">Publications</a></li><li><a href="#contact">Contact</a></li>
-          </ul>
+              <li><a href="#profile">Home</a></li> <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li> <li><a href="#education-experience">Education & <br>Experience</a></li>
+              <li><a href="#projects">Projects/Portfolio</a></li> <li><a href="#Publications">Publications</a></li><li><a href="#contact">Contact</a></li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -584,82 +588,106 @@
       
     </section>
     <section id="education-experience">
-      <p class="section__text__p1" style="color: #ccc1c1;">Look at</p>
-      <h1 class="title" style="color: #ffffff;">Education & Experience</h1>
-      <div class="eduexp-details-container">
-        <div class="eduexp-details-container-sub1">
-          <h1 style="color: rgb(255, 255, 255);">Education</h1><br>
-          <div class="eduexp-details-container-sub1-det1">
-            
-            
-            <div class="education-item">
-              <h3>Self-Learning Path</h3>
-              <p style="color: rgb(4, 114, 0); font-weight: 500;">2024 Jan — Present</p>
-              <p>Learning objectives
-                <p>
-                  <ol class="center-list">
-                      <li>Data Science & Analytics</li>
-                      <li>AI / ML Engineering</li>
-                  </ol>
-                </h5>
-              </p>
+      <div class="eduexp-container">
+        <div class="eduexp-header">
+          <h1>Education & Experience</h1>
+          <h2>Certificate & Certification</h2>
+        </div>
+        <div class="eduexp-main">
+          <div class="experience-section eduexp-section">
+            <h3>Experience</h3>
+            <div class="experience-details">
+              <p class="extitle">Software Engineer</p>
+              <p class="excompany"><img src="assets\img\omdenalogo.jpg">Alles Private Limited</p>
+              <p class="exduration">February 2025   -   Present<span class="dur-diff" id="experience-duration-software-engineer"></span></p>
             </div>
-            <div class="education-item">
+            <ul class="projects-list">
+              <li>Developing and maintaining web applications using modern frameworks.</li>
+              <li>Collaborating with cross-functional teams to deliver high-quality software solutions.</li>
+              <li>Writing clean, efficient, and well-documented code.</li>
+              <li>Participating in code reviews and contributing to improving code quality.</li>
+              <li>Troubleshooting and resolving software defects.</li>
+            </ul>
 
-              <h3>G.C.E (Advanced) Level</h3>
-              <p style="color: rgb(4, 114, 0); font-weight: 500;">2018 — 2021</p>
-              <p>KN/Kilinochchi Maha Vidyalayam</p>
-              
-              <p>Results- C 2S</p>
-              <p>Maths-C,Physics-S, Chemistry-S</p>
+            <div class="experience-details">
+              <p class="extitle">Junior ML Engineer</p>
+              <p class="excompany"><img src="assets\img\omdenalogo.jpg">Omdena</p>
+              <p class="exduration">April 2024   -   Present<span class="dur-diff" id="experience-duration-ml-engineer"></span></p>
             </div>
-            <div class="education-item">
-              <h3>G.C.E (Ordinary) Level</h3>
-              <p style="color: rgb(4, 114, 0); font-weight: 500;">2011 - 2017</p>
-              <p>KN/Vivekanantha Vidyalayam</p>
-              <p>Results- 7A B C</p>
-              <p>Maths-A, Science-A</p>
+            <ul class="projects-list">
+              <li>"Exploring the Role of Social Media and AI in Promoting Glasgow's Tourism"</li>
+              <li>"Evaluating Solutions to Ameliorate the Impact of Food Deserts in Brooklyn Using AI"</li>
+              <li>"UEFA EURO 2024 - Leveraging Machine Learning and Open Data Sets for Advanced Sports Analytics"</li>
+              <li>"Predicting Dengue Fever Outbreaks in Sri Lanka"</li>
+              <li>"Enhancing Legal Research and Prediction through AI-Powered Case Law Analysis"</li>
+            </ul>
+          </div>
+
+          <div class="education-certificates eduexp-section">
+            <div class="education-section eduexp-subsection">
+              <h3>Education</h3>
+              <div class="education-item">
+                <p class="degree">G.C.E Advanced Level (Physical Science)</p>
+                <p class="school">KN / Kilinochchi Maha Vidyalayam</p>
+              </div>
+              <div class="education-item">
+                <p class="degree">G.C.E Ordinary Level</p>
+                <p class="school">KN / Vivekanantha Vidyalayam</p>
+              </div>
+            </div>
+            <div class="certificates-section eduexp-subsection">
+              <h3>Certificates & Certification</h3>
+              <div class="certificate-item">
+                <p>Junior ML Engineer</p>
+                <p class="provider">Omdena</p>
+              </div>
+              <div class="certificate-item">
+                <p>IBM Data Science Professional</p>
+                <p class="provider">Coursera</p>
+              </div>
+              <div class="certificate-item">
+                <p>IBM AI Engineering Professional</p>
+                <p class="provider">Coursera</p>
+              </div>
+              <div class="certificate-item">
+                <p>Moratuwa Trainee Full-Stack developer</p>
+                <p class="provider">Moratuwa University</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="certi-section eduexp-section">
+            <h3>Certificates</h3>
+            <div class="certi-scroll-container">
+              <div class="cer-section">
+                <p>IBM AI Engineering Professional</p>
+                <a href="https://www.coursera.org/account/accomplishments/specialization/BZN2247HHNM2" target="_blank"><img src="assets\img\certificates\ibmaiengineering.jpeg"></a>
+              </div>
+              <div class="cer-section">
+                <p>IBM Data Science Professional</p>
+                <a href="https://www.coursera.org/account/accomplishments/specialization/Y9JU5WLCGU4N" target="_blank"><img src="assets\img\certificates\ibmdatascience.jpeg"></a>
+              </div>
+              <div class="cer-section">
+                <p>Junior ML Engineer</p>
+                <a href="https://confirm.omdena.com/LCsmw88" target="_blank"><img src="assets\img\certificates\OmdenaCertificate.png"></a>
+            </div>
+              <div class="cer-section">
+                <p>IBM Applied Data Science</p>
+                <a href="https://www.coursera.org/account/accomplishments/specialization/DNG3ZP6C5JYD" target="_blank"><img src="assets\img\certificates\ibmappliedds.jpeg"></a>
+              </div>
+              <div class="cer-section">
+                <p>IBM AI Developer</p>
+                <a href="https://www.coursera.org/account/accomplishments/specialization/AXMHKCLPPD4U" target="_blank"><img src="assets\img\certificates\ibmaideveloper.jpeg"></a>
+              </div>
             </div>
           </div>
         </div>
-          
-        <div class="eduexp-details-container-sub2" >
-          <h1 style="color: rgb(255, 255, 255);">Experience</h1><br>
-          <div class="eduexp-details-container-sub1-det2">
-            <div class="education-item">
-              <h3>OMDENA</h3>
-              <p style="color: rgb(4, 114, 0); font-weight: 500;">2024 April — Present</p>
-              <p>Volunteer Project Works as
-                <p style="color: rgb(0, 8, 114); font-weight: 500; font-size: 1.25rem;">Data Scientist & AI / ML Engineer</p>
-              </p>
-              <h4>* Contributed to international projects with a global team of experts at Omdena, focusing on:
-                <br>
-                1. "Exploring the Role of Social Media and AI in Promoting Glasgow’s Tourism"<br>
-                2. "Evaluating Solutions to Ameliorate the Impact of Food Deserts in Brooklyn Using AI"<br>
-                3. "UEFA EURO 2024 – Leveraging Machine Learning and Open Data Sets for Advanced Sports Analytics"<br>
-                4. "Predicting Dengue Fever Outbreaks in Sri Lanka"<br>
-                5. "Enhancing Legal Research and Prediction through AI-Powered Case Law Analysis"</h4><br>
-              <h5>
-                Responsibilities included:<br>
--Conducting thorough research and data collection to support project objectives.<br>
--Performing data cleaning and preprocessing to ensure high-quality inputs.<br>
--Analyzing data and creating insightful visualizations to highlight key findings.<br>
--Building, fine-tuning, and selecting the most effective machine learning models for each project.<br>
--Deriving actionable insights and presenting them through various mediums such as web pages, applications, chatbots, and more.
-              </h5>
-            </div>
-            
-          </div>
-        </div>
-
-        
-        
       </div>
     </section>
     <section id="projects">
       <p class="section__text__p1" >Browse My</p>
       <h1 class="title" style="color: #020092;">Projects</h1>
-      <div class="experience-details-container">
+      <div class="project-details-container">
         <div class="about-containers">
           <div class="details-container color-container">
             <div class="article-container-2">
@@ -828,7 +856,7 @@
         <div class="publication-container">
           <!--1------------>
           <a href="images/b-1.jpg" class="publication-box DSDA" data-lightbox="work">
-            <img alt="" src="images/b-1.jpg">
+            <img alt="" src="">
           </a>
           <!--2------------>
           <a href="https://medium.com/@arignan03/generative-ai-a-new-frontier-in-technology-and-its-multifaceted-applications-b9efe8bb2616" class="publication-box DSDA AIML" data-lightbox="work" target="_blank">
@@ -842,15 +870,15 @@
           </a>
           <!--4------------>
           <a href="images/b-4.jpg" class="publication-box DSDA" data-lightbox="work">
-            <img alt="" src="images/b-4.jpg">
+            <img alt="" src="">
           </a>
           <!--5------------>
           <a href="images/b-5.jpg" class="publication-box DSDA" data-lightbox="work">
-            <img alt="" src="images/b-5.jpg">
+            <img alt="" src="">
           </a>
           <!--6------------>
           <a href="images/b-6.jpg" class="publication-box AIML" data-lightbox="work">
-            <img alt="" src="images/b-6.jpg">
+            <img alt="" src="">
           </a>
         </div> 
         

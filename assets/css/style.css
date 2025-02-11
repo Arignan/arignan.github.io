@@ -736,11 +736,9 @@ section {
   margin: 0px;
   padding: 5px;
   box-sizing: border-box;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0;
   background-color: #121212;
   color: #e0e0e0;
-  
-
 }
 .skills-container {
   max-width: 100%;
@@ -914,134 +912,274 @@ section {
 .floating-emoji:nth-child(8) { top: 85%; right: 10%; animation-delay: -6s; }
 .floating-emoji:nth-child(9) { top: 90%; left: 5%; animation-delay: -7s; }
 
+
+
+
 /*Education & Experience*/
+/* =====================================
+   Education & Experience Section
+===================================== */
 #education-experience {
   position: relative;
-  height: fit-content;
-  background-color: rgb(3, 3, 68);
+  background-color: #020014;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 -4px 25px 2px rgb(89 118 199 / 40%);
 }
 
-
-.eduexp-details-container{
+.eduexp-container {
   padding: 2rem;
-  flex: 1;
-  background: url('/assets/img/bgs.gif');
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(83, 67, 67);
-  border-width: 0.25rem;
-  text-align: center;
-  gap: 1rem;
-  margin: 1rem 5rem;
+  background: #0a0e1887;
+  border: 1px solid #333;
+  border-radius: 15px;
+  box-shadow: inset 0px 0px 20px 4px rgb(128 129 129 / 49%);
   display: flex;
-  justify-content: center;
-
-}
-
-.eduexp-details-container-sub1{
-  padding: 2rem;
-  flex: 1;
-  background: rgb(0, 0, 0);
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(70, 64, 64);
-  border-width: 0.25rem;
-  text-align: center;
-  display: flex;
-  justify-content: top;
-  flex-direction: column;
-  
-}
-
-
-.eduexp-details-container-sub2{
-  padding: 2rem;
-  flex: 1;
-  background: rgb(0, 0, 0);
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(83, 67, 67);
-  border-width: 0.25rem;
-  text-align: center;
-  display: flex;
-  justify-content: top;
   flex-direction: column;
 }
 
-
-
-
-.education-experience h2 {
+/* ---------- Header ---------- */
+.eduexp-header {
   text-align: center;
-  font-size: 32px;
-  margin-bottom: 30px;
-}
-
-.education-item {
-  margin-bottom: 40px;
-  transition: all 300ms ease;
-}
-
-.education-item:hover{
-  scale: 1.01;
-
-}
-
-.education-item h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.education-item p {
-  margin-bottom: 5px;
-}
-
-
-ol.center-list {
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-  list-style-position: inside;
-  color: #031786;
-  size: 2rem;
-  font-weight: 400px;
-}
-
-
-.eduexp-details-container-sub1-det1{
-  padding: 0px 30px;
-  border-left: 2px solid #c90000;
-}
-
-.eduexp-details-container-sub1-det2{
-  padding: 0px 30px;
-  border-left: 2px solid #c90000;
-}
-
-.education-item{
-  position: relative;
-  padding: 20px;
-  border: 1px solid #665353;
-  border-radius: 10px;
-  background-color: #ffffff;
-  cursor: pointer;
-  transition: 0.4s ;
   margin-bottom: 20px;
-
 }
 
-.education-item::before{
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  right: calc(100% + 18px);
-  top: 15%;
-  background-color: #224ca5;
+.eduexp-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 5px;
+  font-family: Georgia, serif;
+}
+
+.eduexp-header h2 {
+  font-size: 1.5em;
+  color: #aaa;
+  font-weight: normal;
+  font-family: Georgia, serif;
+}
+
+/* ---------- Main Content Layout ---------- */
+/* Mobile-first: stacked vertically */
+.eduexp-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+/* =====================================
+   Section Common Styles
+===================================== */
+.experience-section,
+.education-section,
+.certificates-section,
+.certi-section,
+.cer-section {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Section Headings */
+.experience-section h3,
+.education-section h3,
+.certificates-section h3,
+.certi-section h3 {
+  margin-top: 0;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #0093fba8;
+  padding-bottom: 5px;
+  border-radius: 5px;
+}
+
+/* =====================================
+   Left Column – Experience Details
+===================================== */
+
+.experience-details .extitle {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ebebeb;
+  font-family:'Times New Roman', Times, serif;
+  margin-top: 25px;
+}
+
+.experience-details .excompany {
+  color: #a5c3cc;
+  font-style: italic;
+  margin: 8px 8px 8px 0;
+  font-size: 1.3em;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.experience-details .excompany img{
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50px;
+  box-shadow: 0 0 15px 1px rgb(75 75 75);
+  margin-right: 20px;
+}
+
+.experience-details .exduration {
+  color: #aaa;
+  font-size: 1em;
+  margin-bottom: 15px;
+  right: 10%;
+}
+
+.experience-details .dur-diff {
+  color: #8ac78a;
+  font-size: 1em;
+  margin-left: 50px;
+}
+
+.projects-list {
+  list-style: decimal;
+  padding-left: 25px;
+}
+
+.projects-list li {
+  margin-bottom: 10px;
+  line-height: 1.4;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  font-style: italic;
+}
+
+/* =====================================
+   Middle Column – Education & Certificates
+===================================== */
+
+/* Education Section */
+.education-section .education-item {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #555;
+}
+
+.education-section .education-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.education-section .degree {
+  margin-bottom: 5px;
+  color: #f3f3f3;
+  font-family: "Rubik", serif;
+  font-size: 1.3rem;
+}
+
+.education-section .school {
+  color: #bbb;
+  font-size: 1em;
+  font-family:sans-serif;
+}
+
+/* Certificates & Certification Section */
+.certificates-section .certificate-item {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #555;
+}
+
+.certificates-section .certificate-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.certificates-section .certificate-item p {
+  margin: 0;
+  margin-bottom: 5px;
+  color: #e6e6ff;
+  font-size: 1.2em;
+  font-family: "Rubik", serif;
+}
+
+.certificates-section .certificate-item .provider {
+  color: #bbb;
+  font-size: 1em;
+  font-family:sans-serif;
+}
+
+/* =====================================
+   Right Column – Scrolling Certificates
+===================================== */
+.certi-section {
+  width: 100%;
+  height: 850px; /* Adjust as needed */
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.certi-section h3 {
+  margin: 1px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #333;
+  padding: 5px;
+  border-radius: 50px;
+  align-self: center;
+  font-size: 1.5rem;
+}
+
+.certi-scroll-container {
+  overflow-y: scroll;
+  flex: 1;
+  padding-top: 20px;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar Styles */
+.certi-scroll-container::-webkit-scrollbar {
+  width: 10px;
+  height: 4px;
+  background-color: rgba(32, 32, 32, 0.322);
+}
+
+.certi-scroll-container::-webkit-scrollbar-thumb {
+  background-color: rgba(226, 226, 226, 0.486);
+  border-radius: 50px;
+}
+
+.certi-scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(226, 226, 226, 0.815);
+  border-radius: 50px;
+}
+
+.cer-section {
+  margin: 10px;
+  background-color: #121212;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 6px 0px rgb(47 47 47);
+}
+
+.cer-section img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cer-section p {
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+  color: #b1d4ff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
   
-  border: 2px solod rgb(0, 0, 0);
-}
 
 /* PROJECTS SECTION */
 
@@ -1055,7 +1193,8 @@ ol.center-list {
 #projects {
   position: relative;
   background: url('/assets/img/bg.gif');
-  
+  margin: 0px;
+  padding: 5px;
 }
 
 .color-container {

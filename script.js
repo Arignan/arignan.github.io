@@ -184,20 +184,20 @@ document.addEventListener("DOMContentLoaded", function () {
       link: 'https://example.com/project5'
     },
     {
-      image: 'images/project6.jpg',
+      image: '',
       name: 'Project 6',
       description: 'This is a description for Project 6.',
       link: 'https://example.com/project6'
     },
     // Add more projects as needed...
     {
-      image: 'images/project7.jpg',
+      image: '',
       name: 'Project 7',
       description: 'This is a description for Project 7.',
       link: 'https://example.com/project7'
     },
     {
-      image: 'images/project8.jpg',
+      image: '',
       name: 'Project 8',
       description: 'This is a description for Project 8.',
       link: 'https://example.com/project8'
@@ -205,50 +205,50 @@ document.addEventListener("DOMContentLoaded", function () {
     // ... and so on.
     ,
     {
-      image: 'images/project1.jpg',
+      image: '',
       name: 'Project 9',
       description: 'This is a description for Project 1.',
       link: 'https://example.com/project1'
     },
     {
-      image: 'images/project2.jpg',
+      image: '',
       name: 'Project 10',
       description: 'This is a description for Project 2.',
       link: 'https://example.com/project2'
     },
     {
-      image: 'images/project3.jpg',
+      image: '',
       name: 'Project 11',
       description: 'This is a description for Project 3.',
       link: 'https://example.com/project3'
     },
     {
-      image: 'images/project4.jpg',
+      image: '',
       name: 'Project 12',
       description: 'This is a description for Project 4.',
       link: 'https://example.com/project4'
     },
     {
-      image: 'images/project5.jpg',
+      image: '',
       name: 'Project 13',
       description: 'This is a description for Project 5.',
       link: 'https://example.com/project5'
     },
     {
-      image: 'images/project6.jpg',
+      image: '',
       name: 'Project 14',
       description: 'This is a description for Project 6.',
       link: 'https://example.com/project6'
     },
     // Add more projects as needed...
     {
-      image: 'images/project7.jpg',
+      image: '',
       name: 'Project 15',
       description: 'This is a description for Project 7.',
       link: 'https://example.com/project7'
     },
     {
-      image: 'images/project8.jpg',
+      image: '',
       name: 'Project 16',
       description: 'This is a description for Project 8.',
       link: 'https://example.com/project8'
@@ -366,8 +366,72 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// --- Infinite Scroll Code
+
+// --- End of Infinite Scroll Code ---
+
+//Education and Ecperience section 
+document.addEventListener('DOMContentLoaded', function() {
+
+  // --- Dynamic Duration Calculation Code for Software Engineer ---
+  const startDateSoftwareEngineer = new Date('2025-02-01'); // February 1st, 2025
+  const currentDate = new Date();
+  const durationSpanSoftwareEngineer = document.getElementById('experience-duration-software-engineer');
+
+  if (durationSpanSoftwareEngineer) {
+      const durationSoftwareEngineer = getYearsAndMonths(startDateSoftwareEngineer, currentDate);
+      durationSpanSoftwareEngineer.textContent = `(${durationSoftwareEngineer.yearsMonths})`;
+  }
+  // --- End of Dynamic Duration Calculation for Software Engineer ---
+
+   // --- Dynamic Duration Calculation Code for ML Engineer (Existing - Modified ID) ---
+  const startDateMLEngineer = new Date('2024-04-01'); // April 1st, 2024
+  const durationSpanMLEngineer = document.getElementById('experience-duration-ml-engineer'); // Using the modified ID
+
+  if (durationSpanMLEngineer) {
+      const durationMLEngineer = getYearsAndMonths(startDateMLEngineer, currentDate);
+      durationSpanMLEngineer.textContent = `(${durationMLEngineer.yearsMonths})`;
+  }
+  // --- End of Dynamic Duration Calculation for ML Engineer ---
 
 
+  function getYearsAndMonths(startDate, endDate) {
+      let totalMonths = (endDate.getFullYear() - startDate.getFullYear()) * 12;
+      totalMonths -= startDate.getMonth();
+      totalMonths += endDate.getMonth();
+
+      let years = Math.floor(totalMonths / 12);
+      let months = totalMonths % 12;
+
+      let durationText = "";
+      if (years > 0) {
+          durationText += years + " year";
+          if (years > 1) {
+              durationText += "s";
+          }
+          if (months > 0) {
+              durationText += " and ";
+          }
+      }
+      if (months > 0) {
+          durationText += months + " month";
+          if (months > 1) {
+              durationText += "s";
+          }
+      }
+      if (durationText === "") {
+          durationText = "Less than a month";
+      }
+
+      return {
+          years: years,
+          months: months,
+          yearsMonths: durationText
+      };
+  }
+  // --- End of getYearsAndMonths Function ---
+
+});
 
 
 

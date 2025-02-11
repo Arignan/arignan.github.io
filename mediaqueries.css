@@ -164,3 +164,49 @@
     margin: 1rem;
   }
 }
+
+
+/* Desktop/Tablet: Three columns layout */
+@media (min-width: 1024px) {
+  .eduexp-main {
+    flex-direction: row;
+  }
+  /* Left Column: Experience */
+  .experience-section {
+    flex: 0 0 40%; /* Left container takes 40% of the width */
+  }
+  /* Middle Column: Education & Certificates */
+  .education-certificates {
+    flex: 0 0 30%; /* Middle container takes 25% */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  /* Right Column: Scrolling Certificates */
+  .certi-section {
+    flex: 1; /* Right container takes 30% */
+  }
+}
+
+/* =====================================
+   Additional Responsive Adjustments
+===================================== */
+@media (max-width: 600px) {
+  .eduexp-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  
+  .eduexp-header h1 {
+    font-size: 2em;
+  }
+  
+  .eduexp-header h2 {
+    font-size: 1.2em;
+  }
+  
+  /* On very small screens, let the certificates section adjust its height automatically */
+  .certi-section {
+    height: auto;
+  }
+}
