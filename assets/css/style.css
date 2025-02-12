@@ -271,7 +271,9 @@ section {
   margin: auto 0;
   
 }
-
+.section__pic-container img{
+  box-shadow: 0 0 20px 2px rgb(0 0 0 / 92%);
+}
 
 
 .section__text {
@@ -337,8 +339,29 @@ section {
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   height: 120px; /* Set height to fit content */
-}
 
+  background-color: #000;
+  border-radius: 30px;
+  box-shadow: 0 0 12px 0px rgb(0 0 0 / 92%);
+  margin-bottom: 15px;
+}
+.intcont{
+  margin: 5px;
+  background-color: #004750;
+  border-radius: 30px;
+  box-shadow: 0 0 12px 0px rgb(0 0 0 / 92%);
+
+}
+.introtextcon{
+  margin: 15px;
+  text-align: left;
+  background-color: #00bcd4;
+  border-radius: 30px;
+  box-shadow: 0 0 12px 0px rgb(0 0 0 / 92%);
+  padding: 1rem;
+  position: relative;
+  left: 2%;
+}
 #about table {
   margin: 0 auto;  /* Centers the table horizontally */
   
@@ -366,7 +389,13 @@ section {
   width: 8rem;
   border-radius: 2rem;
 }
+.btn-color-1{
+  box-shadow: 0 0 6px 3px rgb(47 47 47 / 92%);
+}
 
+.btn-color-2{
+  box-shadow: 0 0 5px 2px rgb(0 0 0 / 92%);
+}
 .btn-color-1,
 .btn-color-2 {
   border: rgb(53, 53, 53) 0.1rem solid;
@@ -926,7 +955,7 @@ section {
   background-color: #020014;
   color: #fff;
   padding: 2rem;
-  border-radius: 0 0 10px 10px;
+
   box-shadow: 0 -4px 25px 2px rgb(89 118 199 / 40%);
 }
 
@@ -1194,9 +1223,13 @@ section {
 
 #projects {
   position: relative;
-  background: url('/assets/img/bg.gif');
+  background: url('/assets/img/Gemini.jpg');
   margin: 0px;
   padding: 5px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .color-container {
@@ -1205,10 +1238,11 @@ section {
 }
 
 #projects .about-containers{
-  margin: 1rem 5rem;
-  background-color: rgb(0, 0, 0);
+  margin: 5rem 5rem;
+  background-color: #616161;
   padding: 20px;
   border-radius: 15px;
+  box-shadow: 0 0 20px 3px rgb(0 0 0);
 }
 
 .article-container-2{
@@ -1219,7 +1253,13 @@ section {
   gap: 2.5rem;
   justify-content: space-around;
 }
-
+.protitle{
+  color: #ffffff;
+  margin: 0;
+  font-size: 3rem;
+  text-align: center;
+  font-family: Georgia, serif;
+}
 
 .project-img {
   border-radius: 2rem;
@@ -1242,10 +1282,10 @@ section {
   flex: 1;
   background: white;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(83, 67, 67);
   border-width: 0.25rem;
   text-align: center;
+  box-shadow: 0 0 17px 2px rgb(0 0 0);
 }
 
 /*Publications*/
@@ -1253,7 +1293,7 @@ section {
 #Publications{
   position: relative;
   background-color: #010527;
-  border-radius: 20px 20px 0 0;
+  
   box-shadow: 0 0 17px 3px rgb(0 0 0 / 93%);
 }
 .publititle{
