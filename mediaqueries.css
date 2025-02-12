@@ -1,212 +1,289 @@
-/* For large screens (desktop and larger) */
-@media (min-width: 1200px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
-  .about-containers {
-    flex-wrap: wrap;
-  }
-  #contact,
-  #projects {
-    height: fit-content;
-  }
-  
-}
-
-/* For medium screens (tablets and smaller desktops) */
-@media (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
-  }
-  #hamburger-nav {
-    display: flex;
-  }
-  #skills,
-  .skills-details-container {
-    margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
-    display: block;
-  }
-  #profile {
-    height: fit-content;
-  }
-  #education-experience,
-  #contact {
-    height: fit-content;
-  }
-  #contact .contact2 {
-    scale: 0.7;
-    align-items: center;
-    margin: 0 1rem;
-  }
-  .arrow {
-    display: none;
-  }
-  section,
-  .section-container {
-    height: fit-content;
-  }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
-  }
-  .about-containers {
-    margin-top: 0;
-  }
-  #Publications {
-    height: 150vh;
-  }
-  #projects .about-containers {
-    display: flex;
-    flex-direction: column;
-  }
-  #education-experience .eduexp-details-container {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-  }
-}
-
-/* For smaller screens (phones and smaller tablets) */
-@media (max-width: 768px) {
-  #desktop-nav {
-    display: none;
-  }
-  #hamburger-nav {
-    display: flex;
-  }
-
-  .menu-links {
-    width: 100%; /* Make menu full-width */
-    text-align: center;
-  }
-  #skills,
-  .skills-details-container {
-    margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
-    display: block;
-  }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .skillls-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
-  .title {
-    font-size: 2rem;
-  }
-  .text-container {
-    text-align: justify;
-  }
-  #education-experience .eduexp-details-container {
-    display: flex;
-    flex-direction: column;
-    scale: 1;
-    width: fit-content;
-  }
-}
-
-/* For very small screens (small phones and very small tablets) */
-@media (max-width: 500px) {
-  #profile,
-  .section-container {
-    display: block;
-    height: 120vh;
-  }
-  #about {
-    height: 180vh;
-  }
-  footer,
-  #contact {
-    height: fit-content;
-    margin: 1rem;
-  }
-  #education-experience .eduexp-details-container {
-    display: flex;
-    flex-direction: column;
-    scale: 1;
-    width: fit-content;
-  }
-}
-
-/* For extremely small screens (extra small phones) */
-@media (max-width: 400px) {
-  #profile,
-  .section-container {
-    display: block;
-    height: 130vh;
-  }
-  #about {
-    height: 190vh;
-  }
-  footer {
-    height: fit-content;
-    margin: 1rem;
-  }
-}
-
-
-/* Desktop/Tablet: Three columns layout */
-@media (min-width: 1024px) {
-  .eduexp-main {
-    flex-direction: row;
-  }
-  /* Left Column: Experience */
-  .experience-section {
-    flex: 0 0 40%; /* Left container takes 40% of the width */
-  }
-  /* Middle Column: Education & Certificates */
-  .education-certificates {
-    flex: 0 0 30%; /* Middle container takes 25% */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  /* Right Column: Scrolling Certificates */
-  .certi-section {
-    flex: 1; /* Right container takes 30% */
-  }
-}
-
-/* =====================================
-   Additional Responsive Adjustments
-===================================== */
-@media (max-width: 600px) {
-  .eduexp-container {
-    margin: 1rem;
-    padding: 1rem;
+/* ==========================================================================
+   LARGE SCREENS (Desktop and larger)
+   ========================================================================== */
+   @media (min-width: 1200px) {
+    #profile {
+      height: 83vh;
+      margin-bottom: 6rem;
+    }
+    .about-containers {
+      flex-wrap: wrap;
+    }
+    #contact,
+    #projects {
+      height: fit-content;
+    }
   }
   
-  .eduexp-header h1 {
-    font-size: 2em;
+  /* ==========================================================================
+     MEDIUM SCREENS (Tablets and smaller desktops, up to 1200px)
+     ========================================================================== */
+  @media (max-width: 1200px) {
+    #desktop-nav {
+      display: none;
+    }
+    #hamburger-nav {
+      display: flex;
+    }
+    #skills,
+    .skills-details-container {
+      margin-top: 2rem;
+    }
+    #profile,
+    .section-container {
+      display: block;
+    }
+    #profile {
+      height: fit-content;
+    }
+    #education-experience,
+    #contact {
+      height: fit-content;
+    }
+    /* Specific to contact (scaling and margin) */
+    #contact .contact2 {
+      scale: 0.7;
+      align-items: center;
+      margin: 0 1rem;
+    }
+    .arrow {
+      display: none;
+    }
+    section,
+    .section-container {
+      height: fit-content;
+    }
+    .section__pic-container {
+      width: 275px;
+      height: 275px;
+      margin: 0 auto 2rem;
+    }
+    .about-containers {
+      margin-top: 0;
+    }
+    #Publications {
+      height: 150vh;
+    }
+    #projects .about-containers {
+      display: flex;
+      flex-direction: column;
+    }
+    #education-experience .eduexp-details-container {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+    }
   }
   
-  .eduexp-header h2 {
-    font-size: 1.2em;
+  /* ==========================================================================
+     DESKTOP/TABLET: THREE COLUMNS LAYOUT (min-width: 1024px)
+     ========================================================================== */
+  @media (min-width: 1024px) {
+    .eduexp-main {
+      flex-direction: row;
+    }
+    /* Left Column: Experience */
+    .experience-section {
+      flex: 0 0 40%; /* 40% width */
+    }
+    /* Middle Column: Education & Certificates */
+    .education-certificates {
+      flex: 0 0 30%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    /* Right Column: Scrolling Certificates */
+    .certi-section {
+      flex: 1;
+    }
   }
   
-  /* On very small screens, let the certificates section adjust its height automatically */
-  .certi-section {
-    height: auto;
+  /* ==========================================================================
+     SMALLER SCREENS (Tablets, small desktops & phones up to 768px)
+     ========================================================================== */
+  @media (max-width: 768px) {
+    /* Navigation and general layout adjustments */
+    #desktop-nav {
+      display: none;
+    }
+    #hamburger-nav {
+      display: flex;
+    }
+    .menu-links {
+      width: 100%;
+      text-align: center;
+    }
+    #skills,
+    .skills-details-container {
+      margin-top: 2rem;
+    }
+    #profile,
+    .section-container {
+      display: block;
+    }
+    .section__pic-container {
+      width: auto;
+      height: 46vw;
+      justify-content: center;
+    }
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+    .contact-info-container p,
+    .nav-links li a {
+      font-size: 1rem;
+    }
+    .skillls-sub-title {
+      font-size: 1.25rem;
+    }
+    .logo {
+      font-size: 1.5rem;
+    }
+    .title {
+      font-size: 2rem;
+    }
+    .text-container {
+      text-align: justify;
+    }
+    #education-experience .eduexp-details-container {
+      display: flex;
+      flex-direction: column;
+      scale: 1;
+      width: fit-content;
+    }
+    
+    /* ----- Contact Section Adjustments ----- */
+    #contact {
+      padding: 1rem;
+      background-attachment: scroll;
+    }
+    .contact2 {
+      flex-direction: column;
+      gap: 20px;
+      height: auto; /* Let content decide the height */
+      padding: 20px;
+    }
+    .contact-left,
+    .contact-right {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .contact-left {
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+    }
+    .contact-input {
+      width: 90%;
+      max-width: 500px;
+    }
+    .contact-left textarea {
+      width: 90%;
+      max-width: 500px;
+    }
+    .contact-right table {
+      font-size: 1rem;
+    }
   }
-}
+  
+  /* ==========================================================================
+     ADDITIONAL ADJUSTMENTS (Up to 600px)
+     ========================================================================== */
+  @media (max-width: 600px) {
+    .eduexp-container {
+      margin: 1rem;
+      padding: 1rem;
+    }
+    .eduexp-header h1 {
+      font-size: 2em;
+    }
+    .eduexp-header h2 {
+      font-size: 1.2em;
+    }
+    /* Let certificates section adjust its height automatically */
+    .certi-section {
+      height: auto;
+    }
+  }
+  
+  /* ==========================================================================
+     VERY SMALL SCREENS (Up to 500px)
+     ========================================================================== */
+  @media (max-width: 500px) {
+    #profile,
+    .section-container {
+      display: block;
+      height: 120vh;
+    }
+    #about {
+      height: 180vh;
+    }
+    footer,
+    #contact {
+      height: fit-content;
+      margin: 1rem;
+    }
+    #education-experience .eduexp-details-container {
+      display: flex;
+      flex-direction: column;
+      scale: 1;
+      width: fit-content;
+    }
+  }
+  
+  /* ==========================================================================
+     MOBILE DEVICES (Up to 480px)
+     ========================================================================== */
+  @media (max-width: 480px) {
+    .contitle {
+      font-size: 2.5rem;
+    }
+    .contact-left-title h2 {
+      font-size: 1.5rem;
+    }
+    .contact-left-title hr {
+      width: 80px;
+      height: 4px;
+    }
+    .contact-input {
+      width: 100%;
+      height: 45px;
+      font-size: 0.9rem;
+      margin: 0.5rem auto;
+    }
+    .contact-left textarea {
+      width: 100%;
+      height: 100px;
+      font-size: 0.9rem;
+      margin: 0.5rem auto;
+    }
+    .contact-left button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+    .contact-right table {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* ==========================================================================
+     EXTREMELY SMALL SCREENS (Extra small phones up to 400px)
+     ========================================================================== */
+  @media (max-width: 400px) {
+    #profile,
+    .section-container {
+      display: block;
+      height: 130vh;
+    }
+    #about {
+      height: 190vh;
+    }
+    footer {
+      height: fit-content;
+      margin: 1rem;
+    }
+  }
+  

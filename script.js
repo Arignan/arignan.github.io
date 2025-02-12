@@ -436,6 +436,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Get the button that opens the modal
 var btn = document.querySelectorAll("button.modal-button");
 

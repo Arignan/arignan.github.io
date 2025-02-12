@@ -423,7 +423,7 @@ section {
   justify-content: flex-start;    /* Align items to the start (left) */
   align-items: flex-start;       /* Align items to the top */
   gap: 2rem;
-  border: 5px solid rgb(146, 132, 132);
+  border: 3px solid rgb(255 255 255 / 56%);
   border-radius: 30px;
   padding: 2rem;
   background-color: #224ba54f;
@@ -588,7 +588,7 @@ section {
   flex-direction: column;
   justify-content: space-around;
   gap: 1rem;
-  box-shadow: 0 0 30px rgba(134, 183, 223, 0.3);
+  box-shadow: 0 0 15px 10px rgb(0 0 0 / 65%);
   height: 880px;
   width: 100%;
   background-color: #224ba54f;
@@ -647,7 +647,7 @@ section {
   height: 100%;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 12px 0px #000000ba;
 }
 
 .project-card:hover {
@@ -754,9 +754,11 @@ section {
   margin-bottom: 2rem;
 }
 .skills-header h2 {
-  font-size: 2.5rem;
-  color: #00bcd4;
+  font-size: 3rem;
+  color: #ffffff;
   margin-bottom: 0.5rem;
+  text-align: center;
+  font-family: Georgia, serif;
 }
 .skills-header p {
   font-size: 1.1rem;
@@ -1250,9 +1252,17 @@ section {
 
 #Publications{
   position: relative;
-  background-color: rgb(6, 30, 110);
+  background-color: #010527;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 0 17px 3px rgb(0 0 0 / 93%);
 }
-
+.publititle{
+  color: #ffffff;
+  margin: 0;
+  font-size: 3rem;
+  text-align: center;
+  font-family: Georgia, serif;
+}
 
 .contact-info-upper-container-pub{
   justify-content: center;
@@ -1357,17 +1367,31 @@ section {
 
 #contact {
   position: relative;
-  background-color: #ffffff;
-  
+  background-image: url("/assets/img/footerbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 2rem;
 }
 
+.contitle{
+  color: #ffffff;
+  margin: 0;
+  font-size: 3rem;
+  text-align: center;
+  font-family: Georgia, serif;
+}
 .contact2{
   height: 60vh;
   display: flex;
   gap: 150px;
   align-items: center;
   justify-content: space-evenly;
-  margin: 0rem 5rem;
+  background-color: #77777747;
+  padding: 10px;
+  box-shadow: 0px 0px 20px 5px rgb(0 0 0);
+  border-radius: 20px;
 }
 
 .contact-left{
@@ -1376,20 +1400,22 @@ section {
   align-items: start;
   gap: 15px;
   color: #ffffff;
-  background: rgb(65, 65, 65);
+  background: #ffffff8a;
   border-radius: 20px;
   width: fit-content;
+  box-shadow: 0px 0px 15px 2px rgb(14 14 14);
 }
 
 .contact-left-title{
   margin: 1rem;
+  color: #000;
 }
 .contact-left-title hr{
   border: none;
   flex-direction: column;
   width: 120px;
   height: 5px;
-  background-color: coral;
+  background-color: #002270;
   padding-left: 25px;
   font-weight: 500;
   color: #000000;
@@ -1402,27 +1428,33 @@ section {
   width: 400px;
   height: 50px;
   outline: none;
-  background-color: rgb(209, 188, 188);
+  background-color: rgb(39 39 39);
   border-radius: 20px;
   margin-bottom: 20px;
   font-size: 1rem;
   margin: 1rem;
+  color: #ffffff;
+  padding-left: 20px;
 }
 
 .contact-left textarea{
-  width: 240px;
-  height: 100px;
+  width: 380px;
+  height: 110px;
   padding-top: 15px;
   border-radius: 20px;
   font-size: 1rem;
+  
 }
 
 .contact-input:focus{
-  border: 2px solid #ff994f;
+  border: 2px solid #f0f0f0d0;
+  box-shadow: 0px 0px 10px 2px rgb(0, 0, 0);
 }
 
 .contact-input::placeholder{
-  color: #070606;
+  color: #d6d6d6;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left: 10px;
 }
 
 .contact-left button{
@@ -1434,9 +1466,14 @@ section {
   gap: 10px;
   border: none;
   border-radius: 50px;
-  background: linear-gradient(270deg, #ff994f, #fa6d86);
+  background: radial-gradient(black,darkblue);
   cursor: pointer;
   margin: 1rem;
+}
+
+.contact-left button:hover{
+  background: darkblue;
+  box-shadow: 0px 0px 10px 2px rgb(0 0 0 / 42%);
 }
 
 .contact-left button img{
@@ -1444,20 +1481,23 @@ section {
 }
 
 .contact-right{
-  background: rgb(192, 196, 191);
+  background: #d1d1d1ab;
   border-radius: 20px;
   align-items: center;
   justify-content:center;
   width: fit-content;
   margin: 1rem;
+  box-shadow: 0px 0px 15px 2px rgb(14 14 14);
 }
 
 .contact-right table{
   margin: 1rem;
+  width: 100%;
+  font-size: 1.3rem;
 }
 
 tr td:first-child{
-  padding-right: 20px;
+  padding-right: 25px;
 }
 
 .con-lin{
