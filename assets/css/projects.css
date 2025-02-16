@@ -149,6 +149,7 @@ to { opacity: 1; }
     border: 1px solid #eeeeee;
     margin: 20px;
     border-radius: 10px;
+    box-shadow: 0 0 20px 0px rgb(62 62 62 / 75%);
 }
   
 .publication-box img{

@@ -1,5 +1,3 @@
-
-
 const projectBoxes = document.querySelectorAll('.publication-box');
 const publicationContainer = document.querySelector('.publication-container');
 const paginationContainer = document.querySelector('.pagination');
