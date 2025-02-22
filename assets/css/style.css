@@ -707,7 +707,8 @@ section {
   color: #ffffff;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:'Franklin Gothic normal', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 0.05rem;
 }
 
 .project-description {
