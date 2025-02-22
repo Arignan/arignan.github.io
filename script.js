@@ -154,9 +154,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Sample project data (replace these with your actual projects)
   const projectsData = [
     {
-      image: 'assets/img/Robotics-Engineering.webp',
-      name: 'Project 1',
-      description: 'This is a description for Project 1.',
+      image: 'assets/img/bitcoinpp.jpeg',
+      name: 'Bitcoin Price Prediction Using ML',
+      description: 'This predict a signal that indicates whether buying a particular bitcoin stock.',
       link: 'https://example.com/project1'
     },
     {
@@ -167,20 +167,20 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       image: 'projects/Evaluating Solutions to Ameliorate the Impact of Food Deserts in Brooklyn Using AI.jpg',
-      name: 'Project 3',
-      description: 'This is a description for Project 3.',
+      name: 'Evaluating Solutions to Ameliorate the Impact of Food Deserts in Brooklyn Using AI',
+      description: 'Evaluating Solutions to Ameliorate the Impact of Food Deserts in Brooklyn Using AI for NOURISH, an AI-powered platform dedicated to tackling food insecurity.',
       link: 'https://example.com/project3'
     },
     {
       image: 'projects/Nasa exoplanet watch.jpg',
-      name: 'Project 4',
-      description: 'This is a description for Project 4.',
+      name: 'Nasa exoplanet watch',
+      description: 'Nasa exoplanet watch to find and analysis exoplanet data.',
       link: 'https://example.com/project4'
     },
     {
       image: 'projects/omdena glasgow tourism.jpg',
-      name: 'Project 5',
-      description: 'This is a description for Project 5.',
+      name: `Exploring the Role of Social Media and AI in Promoting Glasgow's Tourism.`,
+      description: `Exploring the Role of Social Media and AI in Promoting Glasgow's Tourism.`,
       link: 'https://example.com/project5'
     },
     {
