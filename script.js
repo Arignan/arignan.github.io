@@ -184,9 +184,9 @@ document.addEventListener("DOMContentLoaded", function () {
       link: 'https://example.com/project5'
     },
     {
-      image: '',
-      name: 'Project 6',
-      description: 'This is a description for Project 6.',
+      image: 'assets/img/credidcardfd.jpeg',
+      name: 'Credit Card Fraud Detection',
+      description: 'With Machine Learning, Predict Credit card fraud.',
       link: 'https://example.com/project6'
     },
     // Add more projects as needed...
