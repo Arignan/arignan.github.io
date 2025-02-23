@@ -370,6 +370,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const overlayTitle = document.getElementById("overlayTitle");
   const overlayDescription = document.getElementById("overlayDescription");
   const closeOverlay = document.getElementById("closeOverlay");
+  const overlayImage = document.getElementById("overlayImage");
 
   // Attach hover listeners to each project card
   document.querySelectorAll(".project-card").forEach(card => {
@@ -380,8 +381,10 @@ document.addEventListener("DOMContentLoaded", function () {
         // Retrieve project details from the card
         const title = card.querySelector('.aproject-title').textContent;
         const description = card.querySelector('.project-description').textContent;
+        const imgSrc = card.querySelector('.project-image').src;
         overlayTitle.textContent = title;
         overlayDescription.textContent = description;
+        overlayImage.src = imgSrc;
         overlay.classList.add("show");
       }, 1000); // 1000ms delay before showing overlay
     });
@@ -394,6 +397,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // Close the overlay when the close button is clicked
   closeOverlay.addEventListener("click", () => {
     overlay.classList.remove("show");
+  });
+
+  // Close the overlay if clicking outside the overlay content
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      overlay.classList.remove("show");
+    }
   });
 });
 
