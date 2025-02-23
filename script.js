@@ -364,6 +364,37 @@ document.addEventListener("DOMContentLoaded", function () {
     pageWidth = container.offsetWidth;
     updateCarousel();
   });
+
+  // Overlay functionality with a 1-second hover delay
+  const overlay = document.getElementById("projectOverlay");
+  const overlayTitle = document.getElementById("overlayTitle");
+  const overlayDescription = document.getElementById("overlayDescription");
+  const closeOverlay = document.getElementById("closeOverlay");
+
+  // Attach hover listeners to each project card
+  document.querySelectorAll(".project-card").forEach(card => {
+    let hoverTimer;
+
+    card.addEventListener("mouseenter", function () {
+      hoverTimer = setTimeout(() => {
+        // Retrieve project details from the card
+        const title = card.querySelector('.aproject-title').textContent;
+        const description = card.querySelector('.project-description').textContent;
+        overlayTitle.textContent = title;
+        overlayDescription.textContent = description;
+        overlay.classList.add("show");
+      }, 1000); // 1000ms delay before showing overlay
+    });
+
+    card.addEventListener("mouseleave", function () {
+      clearTimeout(hoverTimer);
+    });
+  });
+
+  // Close the overlay when the close button is clicked
+  closeOverlay.addEventListener("click", () => {
+    overlay.classList.remove("show");
+  });
 });
 
 // --- Infinite Scroll Code
