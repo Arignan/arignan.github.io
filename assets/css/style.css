@@ -312,14 +312,12 @@ section {
 
 .multiText{
   font-weight: 800;
-  font-size: 1.5rem;
+  /*font-size: 1.5rem;*/
   font-family: Georgia, 'Times New Roman', Times, serif;
   white-space: nowrap; /*Prevents the text from wrapping to the next line*/
   text-transform: capitalize;
   color: rgba(255, 255, 255, 0.9);
-  
   text-shadow: -2px 0 0 rgb(0 0 103), 0 2px 0 rgb(0 93 0), 2px 0 0 rgb(0, 0, 0), 0 -2px 0 rgb(143 0 0);
-
   transform: rotateX(45deg);
 }
 
