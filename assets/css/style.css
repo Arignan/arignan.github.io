@@ -346,22 +346,30 @@ section {
   margin-bottom: 15px;
 }
 .intcont{
-  margin: 5px;
-  background-color: #69c2cd7d;
-  border-radius: 30px;
-  box-shadow: 0 0 12px 0px rgb(0 0 0 / 92%);
-
+  background-color: transparent;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 0 12px 0px rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  transition: transform 0.6s ease-out, box-shadow 0.3s ease; /* Smooth transitions */
 }
 .introtextcon{
-  margin: 15px;
+  margin: 5px;
+  margin-bottom: 15px;
   text-align: left;
-  background-color: #00bcd4;
+  background-color:#8dc3e3;
   border-radius: 30px;
   box-shadow: 0 0 12px 0px rgb(0 0 0 / 92%);
   padding: 1rem;
   position: relative;
-  left: 3%;
+  transition: transform 0.6s ease-out, box-shadow 0.3s ease; /* Smooth transitions */
 }
+
+.intcont:hover {
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
+  background-color:#8dc3e393;
+}
+
 #about table {
   margin: 0 auto;  /* Centers the table horizontally */
   
