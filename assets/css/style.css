@@ -256,7 +256,7 @@ section {
 }
 
 .bg-image {
-  background-image: url(/assets/img/bgs.gif);
+  
   filter: blur(1px);
   -webkit-filter: blur(1px);
   background-repeat:no-repeat;
@@ -275,6 +275,62 @@ section {
   box-shadow: 0 0 20px 2px rgb(0 0 0 / 92%);
 }
 
+/* Orbit container behind the profile image */
+.cbanner {
+  position: relative;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* This container rotates continuously */
+.cslider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateOrbit 20s linear infinite;
+}
+
+/* Position each orbiting item on a circular path */
+.citem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;    /* Adjust size as needed */
+  height: 80px;
+  margin: -40px;  /* Center the item (half of width/height) */
+  /* 
+    The transform does three things:
+    1. rotate(…) positions the item at the correct angle,
+    2. translateX(180px) moves it outwards (set orbit radius),
+    3. rotate(…) rotates it back so it appears upright.
+  */
+  transform: rotate(calc((var(--position) - 1) * (360deg / var(--total))))
+             translateX(180px)
+             rotate(calc(-1 * ((var(--position) - 1) * (360deg / var(--total)))));
+}
+
+.citem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: none;
+
+}
+
+/* Keyframes to rotate the orbiting container */
+@keyframes rotateOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 .section__text {
   align-self: center;
