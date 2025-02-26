@@ -1130,7 +1130,11 @@ section {
   gap: 20px;
 }
 
-
+.experience-section{
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  height: 850px;
+}
 
 /* =====================================
    Section Common Styles
@@ -1316,6 +1320,22 @@ section {
 }
 
 .certi-scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(226, 226, 226, 0.815);
+  border-radius: 50px;
+}
+
+.experience-section::-webkit-scrollbar {
+  width: 10px;
+  height: 4px;
+  background-color: rgba(32, 32, 32, 0.322);
+}
+
+.experience-section::-webkit-scrollbar-thumb {
+  background-color: rgba(226, 226, 226, 0.486);
+  border-radius: 50px;
+}
+
+.experience-section::-webkit-scrollbar-thumb:hover{
   background-color: rgba(226, 226, 226, 0.815);
   border-radius: 50px;
 }
