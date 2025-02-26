@@ -364,7 +364,12 @@ section {
   scale: 1.2;
 }
 
-
+#socials-container a img:hover{
+  box-shadow: 0 0 6px 1px rgb(0, 0, 0);
+  border-radius: 50px;
+  align-items: center;
+  justify-self: center;
+}
 
 .multiText{
   font-weight: 800;
@@ -403,7 +408,7 @@ section {
   background-color: transparent;
   border: none;
   border-radius: 40px;
-  box-shadow: 0 0 12px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 12px 0px rgba(0, 0, 0, 0.7);
   z-index: -1;
   transition: transform 0.6s ease-out, box-shadow 0.3s ease; /* Smooth transitions */
 }
@@ -484,10 +489,6 @@ section {
 
 .btn-color-2:hover {
   border: rgb(255, 255, 255) 0.1rem solid;
-}
-
-.btn-container {
-  gap: 1rem;
 }
 
 /* ABOUT SECTION */
