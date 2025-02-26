@@ -138,6 +138,26 @@ function scroolToTop(){
   window.scrollTo(0,0);
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  const picContainers = document.querySelectorAll('.section__pic-container');
+  const cslider = document.querySelector('.cslider');
+  const defaultSpeed = '20s'; // Default speed when not hovering
+  const hoverSpeed = '3s';     // Faster speed on hover
+
+  picContainers.forEach(container => {
+    container.addEventListener('mouseover', function() {
+      if (cslider) {
+        cslider.style.animationDuration = hoverSpeed;
+      }
+    });
+
+    container.addEventListener('mouseout', function() {
+      if (cslider) {
+        cslider.style.animationDuration = defaultSpeed;
+      }
+    });
+  });
+});
 
 // Enable collapsible functionality for all sections with a .collapsible-header
 document.addEventListener('DOMContentLoaded', function() {
