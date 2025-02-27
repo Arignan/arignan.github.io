@@ -349,11 +349,21 @@ section {
   font-size: 1.75rem;
   margin-bottom: 1rem;
 }
-
+.titlecont{
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: inset 0 0 12px 2px rgb(0 0 0 / 90%);
+  padding: 25px;
+}
 .title {
   font-size: 5.5rem;
   text-align: center;
   font-family: Georgia, serif;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 0 9px 3px rgb(0 0 0 / 90%);
+  padding: 5px;
+  color: #000077;
 }
 
 #socials-container {
@@ -398,10 +408,10 @@ section {
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   height: 120px; /* Set height to fit content */
-
+  /*
   background-color: #0000000d;
   border-radius: 30px;
-  box-shadow: 0 0 12px 0px rgb(0 0 0 / 92%);
+  box-shadow: 0 0 12px 0px rgb(0 0 0 / 92%); */
   margin-bottom: 15px;
 }
 .intcont{
@@ -426,7 +436,7 @@ section {
 
 .intcont:hover {
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
-  background-color:#8dc3e393;
+  background-color:#00fff293;
 }
 
 #about table {
