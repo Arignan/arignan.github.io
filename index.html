@@ -72,6 +72,34 @@
       </nav>
     </header>
     <section id="profile">
+      <nav id="desktop-nav" style="position: absolute;  z-index: 1;">
+        <div class="logo"><img src="assets/img/logo2.jpg" alt="Arignan Sritharan"
+          onclick="location.href='index.html'"></div>
+        <div>
+          <ul class="nav-links">
+            <li><a href="#profile">Home</a></li> <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li> <li><a href="#education-experience">Education & Experience</a></li>
+            <li><a href="#projects">Projects</a></li> <li><a href="#Publications">Publications</a></li><li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav id="hamburger-nav" style="position: absolute;  z-index: 1;" >
+        <div class="logo"><img src="assets/img/logo2.jpg" alt="Your Website Logo"></div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <ul class="nav-links"></ul>
+              <li><a href="#profile">Home</a></li> <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li> <li><a href="#education-experience">Education & <br>Experience</a></li>
+              <li><a href="#projects">Projects</a></li> <li><a href="#Publications">Publications</a></li><li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <div class="bg-image"></div>
       <div class="section__pic-container">
         <img src="assets/img/profile-pic.jpg" style="border-radius: 50%;" alt="Arignan profile picture" class="Arignan-profile-picture">

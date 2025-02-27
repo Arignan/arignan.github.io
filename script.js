@@ -133,6 +133,62 @@ document.querySelectorAll(".nav-links a").forEach(link => {
   });
 });
 
+//function to hide nav bar when scroll down and non active
+const scrollHeader = document.getElementById('desktop-nav');
+let lastScrollY = window.scrollY;
+let scrollTimer;
+const headertag = document.querySelector('header'); // Get the header element
+const profileSection = document.getElementById('profile'); // Get your profile section
+
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    const headerTop = headertag.offsetTop; // Top of the header
+    const headerBottom = headerTop + headertag.offsetHeight; // Bottom of the header
+    const profileSectionTop = profileSection.offsetTop; // Top of the profile section
+    const profileSectionBottom = profileSectionTop + profileSection.offsetHeight; // Bottom of the profile section
+
+    console.log("currentScrollY:", currentScrollY); // ADDED: Log current scroll position
+    console.log("headerTop:", headerTop);         // ADDED: Log headerTop
+    console.log("headerBottom:", headerBottom);     // ADDED: Log headerBottom
+
+
+    clearTimeout(scrollTimer); // Clear any existing inactivity timer
+
+    // Check if user is **INSIDE** the header OR **INSIDE** the profile section
+    if (
+        (currentScrollY >= headerTop && currentScrollY < headerBottom) ||
+        (currentScrollY >= profileSectionTop && currentScrollY < profileSectionBottom)
+    ) {
+        // User is in the header OR profile section - always show nav, and DO NOT set inactivity timer
+        scrollHeader.style.transform = 'translateY(0)';
+    } else {
+        // User is OUTSIDE both header and profile sections - apply hide/show logic AND inactivity timer
+
+        if (currentScrollY > lastScrollY) {
+            // Scrolling Down: Hide nav
+            scrollHeader.style.transform = 'translateY(-100%)';
+        } else {
+            // Scrolling Up: Show nav
+            scrollHeader.style.transform = 'translateY(0)';
+        }
+
+        // Set a new timer to hide after 2 seconds of inactivity ONLY when OUTSIDE header and profile
+        scrollTimer = setTimeout(() => {
+            scrollHeader.style.transform = 'translateY(-100%)';
+        }, 2000);
+    }
+
+    lastScrollY = currentScrollY;
+});
+
+//show while hover in nav bar (or header, depending on desired behavior)
+headertag.addEventListener('mouseover', () => {
+    scrollHeader.style.transform = 'translateY(0)';
+});
+
+headertag.addEventListener('mouseout', () => {
+    scrollHeader.style.transform = 'translateY(-100%)';
+});
 
 function scroolToTop(){
   window.scrollTo(0,0);

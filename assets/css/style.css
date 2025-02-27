@@ -130,15 +130,18 @@ a:hover {
   left: 0;
   z-index: 1000; /* To make sure it stays on top of other content */
   transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+  transition: transform 0.3s ease-out; /* Smooth transition for hiding/showing */
+  display: flex;
+  transform: translateY(0); /* Hide by moving it off-screen */
 }
+
+
 
 /* Hamburger Navigation (Hidden by Default) */
 
 #hamburger-nav {
   display: none; /* Hidden by default for larger screens */
   height: auto;
-  
-  
 }
 
 /* When scrolled, change background color */
@@ -576,7 +579,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #3efdedfb;
+  color: #000000fb;
   font-family:'Courier New', Courier, monospace;
   font-size: 18px;
 }
