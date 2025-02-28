@@ -539,7 +539,7 @@ section {
   gap: 2rem;                      /* Gap between the stacked containers */
 }
 .section_det{
-  width: 500px;
+  width: 450px;
   height: 420px;
   font-size: 1.5rem;
   color: #00FFFF;
@@ -663,7 +663,7 @@ section {
   border-radius: 20px;
   padding: 2rem;
   height: fit-content;
-  width: 500px;
+  width: 450px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.644);
 }
 .domain-details-container p{
@@ -673,11 +673,11 @@ section {
 
 }
 .domain-text {
-  font-size: 1.5rem;
+  font-size: 1.3rem;/*notowrk because below overwrited*/
 }
 .domain-text p{
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #ffffff;
   font-family: 'Courier New', Courier, monospace;
 }
