@@ -95,7 +95,7 @@ a:hover {
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: rgb(181, 181, 181);
-  scale: (1.2);
+  transform: scale(1.2);
 }
 
 /* Logo Styling */
@@ -129,8 +129,7 @@ a:hover {
   top: 0;
   left: 0;
   z-index: 1000; /* To make sure it stays on top of other content */
-  transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
-  transition: transform 0.3s ease-out; /* Smooth transition for hiding/showing */
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-out; /* Smooth background color transition */ /* Smooth transition for hiding/showing */
   display: flex;
   transform: translateY(0); /* Hide by moving it off-screen */
 }
@@ -171,7 +170,7 @@ a:hover {
 }
 
 .hamburger-icon:hover{
-  scale: (1.1);
+  transform: scale(1.1);
 }
 
 .hamburger-icon span {
@@ -374,7 +373,7 @@ section {
   justify-content: center;
   margin-top: 1rem;
   gap: 1rem;
-  scale: 1.2;
+  
 }
 
 #socials-container a img:hover{
@@ -382,6 +381,20 @@ section {
   border-radius: 50px;
   align-items: center;
   justify-self: center;
+  transform: scale(1.1);
+  animation: rotateico 1s linear ;
+}
+
+@keyframes rotateico {
+  0% {
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .multiText{
