@@ -215,7 +215,7 @@ a:hover {
   font-size: 1.1rem;
   color: black;
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links li {
@@ -375,25 +375,26 @@ section {
   gap: 1rem;
   
 }
-
+#socials-container a{
+  transform: scale(1);
+}
 #socials-container a img:hover{
   box-shadow: 0 0 6px 1px rgb(0, 0, 0);
   border-radius: 50px;
   align-items: center;
   justify-self: center;
-  transform: scale(1.1);
-  animation: rotateico 1s linear ;
+  animation: scaleico 1s linear ;
 }
 
-@keyframes rotateico {
+@keyframes scaleico {
   0% {
-    transform: rotate(0deg);
+    transform: scale(1);
   }
   50%{
-    transform: rotate(45deg);
+    transform: scale(1.1);
   }
   100% {
-    transform: rotate(0deg);
+    transform: scale(1);
   }
 }
 
