@@ -42,7 +42,7 @@
     }
     /* Specific to contact (scaling and margin) */
     #contact .contact2 {
-      scale: 0.7;
+      transform: scale(0.7);
       align-items: center;
       margin: 0 1rem;
     }
@@ -151,7 +151,7 @@
     #education-experience .eduexp-details-container {
       display: flex;
       flex-direction: column;
-      scale: 1;
+      transform: scale(1);
       width: fit-content;
     }
     
@@ -229,7 +229,7 @@
     #education-experience .eduexp-details-container {
       display: flex;
       flex-direction: column;
-      scale: 1;
+      transform: scale(1);
       width: fit-content;
     }
   }
