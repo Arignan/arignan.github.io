@@ -673,7 +673,7 @@ section {
   padding: 1rem;
   top: 50%;
   left: 50%;
-
+  transition: all 0.3s ease;
   background-color: #224ba54f;
   margin: 5px;
   border-radius: 20px;
@@ -681,6 +681,11 @@ section {
   height: fit-content;
   width: 450px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.644);
+  border: 1px solid #224ba54f;
+}
+
+.domain-details-container:hover {
+  border-color: rgba(100, 219, 255, 0.74);
 }
 .domain-details-container p{
   margin: 0;
@@ -689,13 +694,38 @@ section {
 
 }
 .domain-text {
+  display: flex;
+  flex-direction: column;
   font-size: 1.3rem;/*notowrk because below overwrited*/
+  gap: 0.6rem;
+  margin-bottom: 1rem;
 }
 .domain-text p{
   margin: 0;
   font-size: 1.5rem;
   color: #ffffff;
   font-family: 'Courier New', Courier, monospace;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.domain-text p::after {
+  content: '_';
+  position: absolute;
+  left: 0;
+  bottom: -10%;
+  color: #e564ff80;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  transform-origin: 0 50%; /* Set the origin to the right edge */
+  transform: scaleX(0);
+}
+
+.domain-text p:hover {
+  transform: translateX(1px);
+}
+
+.domain-text p:hover::after {
+  transform: scaleX(5) translateX(5px);
 }
 
 .domai-txt{
