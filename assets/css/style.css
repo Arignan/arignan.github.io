@@ -271,10 +271,12 @@ section {
   height: 400px; /* Set the height of your home section */
   width: 400px;
   margin: auto 0;
-  
+  object-fit:fill; /* Stretch to fill, potentially distorting */
 }
 .section__pic-container img{
   box-shadow: 0 0 20px 2px rgb(0 0 0 / 92%);
+  
+  
 }
 
 /* Orbit container behind the profile image */
