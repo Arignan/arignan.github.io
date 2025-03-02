@@ -409,6 +409,7 @@ section {
   color: rgba(255, 255, 255, 0.9);
   text-shadow: -2px 0 0 rgb(0 0 103), 0 2px 0 rgb(0 93 0), 2px 0 0 rgb(0, 0, 0), 0 -2px 0 rgb(143 0 0);
   transform: rotateX(45deg);
+  
 }
 
 
