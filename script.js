@@ -228,6 +228,60 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+//name 3d effect 
+const titleCont = document.getElementById('titleCont');
+const titleText = document.getElementById('titleText');
+const body = document.getElementById('titleCont');
+
+const maxXRotation = 10;
+const maxYRotation = 10;
+const maxShadowOffset = 17;
+
+body.addEventListener('mousemove', (e) => {
+  const centerX = window.innerWidth / 2;
+  const centerY = window.innerHeight / 2;
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+
+  const rotationX = (centerY - mouseY) / centerY * maxXRotation;
+  const rotationY = (mouseX - centerX) / centerX * maxYRotation;
+
+  titleCont.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+
+  // Calculate shadow offsets - enhanced, stronger shadows
+  const shadowOffsetXCont = rotationY / maxYRotation * maxShadowOffset;
+  const shadowOffsetYCont = rotationX / maxXRotation * maxShadowOffset;
+
+  const shadowOffsetXTitle = rotationY / maxYRotation * maxShadowOffset;
+  const shadowOffsetYTitle = rotationX / maxXRotation * maxShadowOffset;
+
+  const shadowOffsetXBefore = -shadowOffsetXCont * 0.7;
+  const shadowOffsetYBefore = -shadowOffsetYCont * 0.7;
+
+
+  // Apply dynamic shadows - enhanced, stronger shadows
+  titleCont.style.boxShadow = `${shadowOffsetXCont.toFixed(1)}px ${shadowOffsetYCont.toFixed(1)}px 4px rgb(53 53 53 / 91%), /* Stronger main shadow */
+                                ${(shadowOffsetXCont * 0.6).toFixed(1)}px ${(shadowOffsetYCont * 0.6).toFixed(1)}px 12px rgba(0, 0, 0, 0.1)`; /*  Softer secondary shadow */
+  titleText.style.boxShadow = `${shadowOffsetXTitle.toFixed(1)}px ${shadowOffsetYTitle.toFixed(1)}px 3px rgb(40 42 43 / 90%), /* Stronger main shadow */
+                                ${(shadowOffsetXTitle * 0.6).toFixed(1)}px ${(shadowOffsetYTitle * 0.6).toFixed(1)}px 10px rgba(0, 0, 0, 0.15)`; /* Softer secondary shadow */
+  titleCont.style.setProperty('--pseudo-shadow-offset-x', `${shadowOffsetXBefore.toFixed(1)}px`);
+  titleCont.style.setProperty('--pseudo-shadow-offset-y', `${shadowOffsetYBefore.toFixed(1)}px`);
+  titleCont.style.setProperty('--pseudo-shadow-blur', `9px`);
+
+
+});
+
+body.addEventListener('mouseleave', () => {
+  // Reset rotation and shadows - enhanced, stronger defaults
+  titleCont.style.transform = `rotateX(0deg) rotateY(0deg)`;
+  titleCont.style.boxShadow = `9px 9px 4px rgb(53 53 53 / 91%), /* Reset to stronger default shadow */
+                                15px 15px 12px rgba(0, 0, 0, 0.1)`; /* Reset to softer secondary default shadow */
+  titleText.style.boxShadow = `9px 9px 3px 0px rgb(40 42 43 / 90%), /* Reset to stronger default shadow */
+                                16px 16px 10px rgba(0, 0, 0, 0.15)`; /* Reset to softer secondary default shadow */
+  titleCont.style.setProperty('--pseudo-shadow-offset-x', `7px`); /* Reset inset shadow offset - stronger theme */
+  titleCont.style.setProperty('--pseudo-shadow-offset-y', `7px`); /* Reset inset shadow offset - stronger theme */
+  titleCont.style.setProperty('--pseudo-shadow-blur', `9px`);
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   // Sample project data (replace these with your actual projects)
