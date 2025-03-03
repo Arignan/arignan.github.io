@@ -1023,9 +1023,338 @@ section {
 
 /* skills SECTION */
 
-/*-----------------------------------------------------
-  Container & Header
------------------------------------------------------*/
+/* Top Section Background - As User Specified */
+#skills {
+  background-color: #000029;
+  color: #f8f9fa;
+  font-family: 'Nunito', sans-serif;
+  padding: 10px;
+  line-height: 1.7;
+
+}
+
+/* Middle Section - Deep Violet Blue Background */
+#skills .skills-container {
+  background-color: #120e29; /* Deeper Violet Blue Middle Section Background */
+  color: #f8f9fa;
+  border-radius: 30px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7); /* Even Stronger shadow for deeper dark */
+  padding: 30px;
+  max-width: 95%;
+  margin: 0 auto;
+  background-image: linear-gradient(155deg, #120e29 0%, #0e0b20 100%); /* Deeper Violet Blue Gradient */
+}
+
+/* Bottom Section Background - As User Specified */
+body {
+  background-color: #020014;
+}
+
+
+#skills .skills-header {
+  border-bottom: none;
+  margin-bottom: 35px;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+#skills .skills-header h2 {
+  color: #ffffff; /* Light Header Text for deep violet blue background */
+  font-size: 2.9em;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: -1.7px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Even stronger text shadow */
+}
+
+#skills .skills-header p {
+  color: #d8d4e8; /* Even Lighter Violet-Gray Description */
+  font-size: 1.35em;
+  opacity: 1;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: none;
+}
+
+#skills .skill-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+  padding-bottom: 7px;
+  border-bottom: 2px solid #2a2542; /* Deeper Violet Blue Tab Border */
+}
+
+#skills .skill-tabs button {
+  background-color: transparent;
+  border: none;
+  color: #f0f0f0; /* Very Light Gray Tab Text */
+  padding: 13px 25px;
+  font-size: 1.3em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  background-image: none;
+}
+
+#skills .skill-tabs button:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.07); /* Slightly stronger hover background */
+}
+
+#skills .skill-tabs button.active {
+  color: #ffffff;
+  border-bottom-color: transparent;
+  /* Active Tab - Rainbow Multi-Color Underline Animation - Style 42 (same as 41) */
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Rainbow gradient - Style 42 (same as 41) */
+  background-repeat: no-repeat;
+  background-size: 200% 3px; /* Wider than button for animation */
+  background-position: 0% 100%; /* Start at left bottom */
+  animation: active-underline-animation 4s linear infinite; /* Apply infinite animation - Style 42 Keyframes (same as 41) */
+}
+
+@keyframes active-underline-animation { /* Keyframes for active tab infinite rainbow multi-color underline - Style 42 (same as 41) */
+  0% {
+      background-position: 0% 100%; /* Start at left */
+  }
+  100% {
+      background-position: 100% 100%; /* Move to right */
+  }
+}
+
+
+#skills .skill-tabs button.active:hover {
+  background-color: rgba(255, 255, 255, 0.07); /* Hover effect for active tab - Style 42 (same as 41) - keep hover background */
+}
+
+
+#skills .tab-content {
+  display: none;
+  padding: 35px;
+  height: 580px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar Styling - Deep Violet Blue Theme */
+#skills .tab-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+#skills .tab-content::-webkit-scrollbar-track {
+  background: #2a2542; /* Deeper Violet Blue Scrollbar Track */
+  border-radius: 6px;
+}
+
+#skills .tab-content::-webkit-scrollbar-thumb {
+  background-color: #20c997; /* Vibrant Teal Scrollbar Thumb */
+  border-radius: 6px;
+  border: 1px solid #2a2542; /* Deeper Violet Blue border for thumb */
+}
+
+
+/* --- Tool Skills Tab - Style 42 - Four Columns on larger screens, responsive to smaller --- */
+#skills .tab-content#tool.active {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Four Columns - Style 42 - Default for larger screens */
+  gap: 30px;
+  padding: 25px;
+}
+
+#skills .tab-content#tool .skill-category {
+  background-color: #2a2542; /* Deeper Violet Blue Category Box - Style 42 (same as 41) */
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.6); /* Even Stronger shadow */
+  border: 1px solid #302b4a; /* Slightly Lighter Violet Blue Border - Style 42 (same as 41) */
+   background-image: linear-gradient(150deg, #2a2542 0%, #24203a 100%); /* Deeper Violet Blue Gradient - Style 42 (same as 41) */
+}
+
+#skills .tab-content#tool .skill-category-title {
+  color: #ffffff; /* Light Category Title */
+  font-size: 1.4em; /* Category Title size - Style 42 (same as 41) */
+  font-weight: 700; /* Category Title weight - Style 42 (same as 41) */
+  margin-bottom: 15px; /* Margin - Style 42 (same as 41) */
+  border-bottom: 2px dashed #524d64; /* Dashed Border - Style 42 (same as 41) */
+  padding-bottom: 8px; /* Padding - Style 42 (same as 41) */
+  text-shadow: none;
+}
+
+#skills .tab-content#tool .skill-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+#skills .tab-content#tool .skill-tag {
+  background-color: #302b4a; /* Slightly Lighter Violet Blue Tag Background - Style 42 (same as 41) */
+  color: #e9ecef;
+  padding: 10px 18px;
+  border-radius: 24px; /* Tag border-radius - Style 42 (same as 41) */
+  display: inline-block;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Even Stronger tag shadow */
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+#skills .tab-content#tool .skill-tag:hover {
+  background-color: #3b3655; /* Slightly Lighter Violet Blue Tag Hover - Style 42 (same as 41) */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); /* Even Stronger hover tag shadow */
+}
+
+
+/* --- Technical, Soft, Other Skills Tabs - Deep Violet Blue Card Grid Layout (Style 42 - responsive) --- */
+#skills .tab-content.active:not(#tool) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Style 42 - Default for larger screens - auto-fill columns */
+  gap: 25px;
+}
+
+#skills .tab-content.active:not(#tool) .skill-item {
+  background-color: #2a2542; /* Deeper Violet Blue Card Background - Style 42 (same as 41) */
+  color: #e9ecef;
+  padding: 22px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.6); /* Even Stronger card shadow */
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-color 0.2s ease-in-out;
+  border: 1px solid #302b4a; /* Slightly Lighter Violet Blue Border - Style 42 (same as 41) */
+   background-image: linear-gradient(150deg, #2a2542 0%, #24203a 100%); /* Deeper Violet Blue Gradient - Style 42 (same as 41) */
+}
+
+#skills .tab-content.active:not(#tool) .skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.7); /* Even Stronger hover card shadow */
+  border-color: #20c997; /* Vibrant Teal Hover Border - contrast with violet blue */
+}
+
+
+#skills .skill-icon { /* Generic skill icon style - Deep Violet Blue Theme */
+  background-color: #302b4a; /* Slightly Lighter Violet Blue Icon Background */
+  color: #20c997; /* Vibrant Teal Icon Color - contrast with violet blue */
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8em;
+  opacity: 0.85;
+  text-shadow: none;
+}
+
+#skills .skill-name { /* Generic skill name style - Deep Violet Blue Theme */
+  font-size: 1.2em;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-shadow: none;
+}
+
+/* Set body background to the bottom section color */
+body {
+  background-color: #020014;
+}
+
+
+/* --- Media Queries for Responsiveness - Style 42 --- */
+
+/* For tablets and smaller screens (up to 768px) */
+@media (max-width: 768px) {
+  #skills .skills-container {
+      padding: 45px; /* Reduced padding for tablet */
+  }
+  #skills .skills-header h2 {
+      font-size: 2.6em; /* Slightly smaller header for tablet */
+  }
+  #skills .skills-header p {
+      font-size: 1.2em; /* Slightly smaller description for tablet */
+  }
+  #skills .skill-tabs button {
+      font-size: 1.2em; /* Smaller tab font for tablet */
+      padding: 10px 20px; /* Smaller tab padding for tablet */
+  }
+  #skills .tab-content#tool.active {
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Three columns for Tool Skills on tablet */
+  }
+  #skills .tab-content.active:not(#tool) {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Two columns for other skills on tablet */
+  }
+  #skills .tab-content.active:not(#tool) .skill-item {
+      padding: 18px; /* Reduced card padding for tablet */
+  }
+   #skills .tab-content#tool .skill-category-title {
+      font-size: 1.3em; /* Slightly smaller category title for tablet */
+  }
+  #skills .tab-content#tool .skill-tag {
+      font-size: 1.05em; /* Slightly smaller skill tag for tablet */
+  }
+  #skills .skill-name {
+      font-size: 1.15em; /* Slightly smaller skill name for tablet */
+  }
+
+
+}
+
+/* For mobile and very small screens (up to 576px) */
+@media (max-width: 576px) {
+  #skills .skills-container {
+      padding: 30px; /* Further reduced padding for mobile */
+  }
+  #skills .skills-header h2 {
+      font-size: 2.2em; /* Smaller header for mobile */
+  }
+  #skills .skills-header p {
+      font-size: 1.1em; /* Smaller description for mobile */
+  }
+  #skills .skill-tabs {
+      flex-direction: column; /* Stack tabs vertically on mobile */
+      align-items: stretch; /* Full width tabs on mobile */
+      justify-content: flex-start; /* Align items to start in column layout */
+      border-bottom: none; /* Remove border in vertical layout */
+  }
+  #skills .skill-tabs button {
+      margin-bottom: 5px; /* Spacing between stacked tabs */
+      margin-right: 0; /* Remove right margin for stacked tabs */
+      display: block; /* Make tabs full width */
+      width: 100%; /* Ensure full width */
+      text-align: center; /* Center text in tabs */
+      padding: 12px 15px; /* Further reduced tab padding for mobile */
+  }
+  #skills .tab-content {
+      padding: 25px 15px; /* Reduced tab content padding for mobile */
+  }
+  #skills .tab-content#tool.active {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Two columns for Tool Skills on mobile */
+  }
+  #skills .tab-content.active:not(#tool) {
+      grid-template-columns: 1fr; /* Single column for other skills on mobile */
+  }
+  #skills .tab-content#tool .skill-category {
+      padding: 20px; /* Reduced category box padding for mobile */
+  }
+  #skills .tab-content#tool .skill-tag-list {
+      justify-content: center; /* Center align tags on mobile */
+  }
+
+  #skills .tab-content.active:not(#tool) .skill-item {
+      padding: 15px; /* Further reduced card padding for mobile */
+  }
+  #skills .skill-icon {
+      width: 50px; /* Smaller skill icon for mobile */
+      height: 50px; /* Smaller skill icon for mobile */
+      font-size: 1.6em; /* Smaller skill icon font size for mobile */
+  }
+
+
+}
 
 
 .floating-emoji {

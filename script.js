@@ -218,15 +218,26 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Enable collapsible functionality for all sections with a .collapsible-header
+//skills section functioanality
 document.addEventListener('DOMContentLoaded', function() {
-  const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
-  collapsibleHeaders.forEach(header => {
-    header.addEventListener('click', function() {
-      this.parentElement.classList.toggle('open');
-    });
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabButtons.forEach(button => {
+      button.addEventListener('click', function() {
+          const tabName = this.dataset.tab;
+
+          // Deactivate all tabs and tab contents
+          tabButtons.forEach(btn => btn.classList.remove('active'));
+          tabContents.forEach(content => content.classList.remove('active'));
+
+          // Activate the clicked tab and corresponding content
+          this.classList.add('active');
+          document.getElementById(tabName).classList.add('active');
+      });
   });
 });
+
 
 //name 3d effect 
 const titleCont = document.getElementById('titleCont');
