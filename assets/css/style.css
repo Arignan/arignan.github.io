@@ -462,7 +462,18 @@ section {
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
   background-color:#00fff2;
 }
-
+.introtextcon .introtextconem{
+  font-style: italic;
+  color: #0790eb;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px; 
+  font-weight:750;
+  letter-spacing: normal;
+  display: inline;
+}
+.intcont:hover .introtextconem{
+  color: #00ff55;
+}
 #about table {
   margin: 0 auto;  /* Centers the table horizontally */
   
