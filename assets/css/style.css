@@ -1512,6 +1512,7 @@ section {
   font-style: italic;
 }
 
+
 /* =====================================
    Middle Column – Education & Certificates
 ===================================== */
@@ -1734,6 +1735,26 @@ section {
   border-width: 0.25rem;
   text-align: center;
   box-shadow: 0 0 17px 2px rgb(0 0 0);
+}
+.project-details-container .btn-color-2{
+  overflow: hidden;
+}
+
+.project-details-container .btn-color-2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgb(24, 24, 24);
+  transition: width 0.3s ease;
+  z-index: -2;
+  border-radius: 2rem; /* Specific border-radius set */
+}
+
+.project-details-container .btn-color-2:hover::before {
+  width: 100%;
 }
 
 /*Publications*/
