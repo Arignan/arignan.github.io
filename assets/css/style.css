@@ -453,7 +453,7 @@ section {
   background-color: #0000000d;
   border-radius: 30px;
   box-shadow: 0 0 12px 0px rgb(0 0 0 / 92%); */
-  margin-bottom: 15px;
+  margin: 30px;
 }
 .typed-fade-out{
   opacity: 0;
@@ -1185,20 +1185,20 @@ section {
 
 #skills .tab-content#tool .skill-tag {
   background-color: #302b4a; /* Slightly Lighter Violet Blue Tag Background - Style 42 (same as 41) */
-  color: #e9ecef;
+  color: #30a728;
   padding: 10px 18px;
   border-radius: 24px; /* Tag border-radius - Style 42 (same as 41) */
   display: inline-block;
-  font-size: 1.1em;
+  font-size: 1.15em;
   margin-bottom: 5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Even Stronger tag shadow */
+  box-shadow: -13px 13px 8px 0px rgba(0, 0, 0, 0.5); /* Even Stronger tag shadow */
   transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
 }
 
 #skills .tab-content#tool .skill-tag:hover {
   background-color: #3b3655; /* Slightly Lighter Violet Blue Tag Hover - Style 42 (same as 41) */
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); /* Even Stronger hover tag shadow */
+  box-shadow: -13px 13px 4px 0px rgba(0, 0, 0, 0.5); /* Even Stronger hover tag shadow */
 }
 
 
