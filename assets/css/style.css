@@ -1030,7 +1030,7 @@ section {
   font-family: 'Nunito', sans-serif;
   padding: 10px;
   line-height: 1.7;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 /* Middle Section - Deep Violet Blue Background */
@@ -1039,7 +1039,7 @@ section {
   color: #f8f9fa;
   border-radius: 30px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7); /* Even Stronger shadow for deeper dark */
-  padding: 30px;
+  padding: 20px;
   max-width: 95%;
   margin: 0 auto;
   background-image: linear-gradient(155deg, #120e29 0%, #0e0b20 100%); /* Deeper Violet Blue Gradient */
@@ -1047,7 +1047,7 @@ section {
 
 #skills .skills-header {
   border-bottom: none;
-  margin-bottom: 35px;
+  margin-bottom: 10px;
   padding-bottom: 0;
   text-align: center;
 }
@@ -1064,19 +1064,10 @@ section {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Even stronger text shadow */
 }
 
-#skills .skills-header p {
-  color: #d8d4e8; /* Even Lighter Violet-Gray Description */
-  font-size: 1.35em;
-  opacity: 1;
-  font-weight: 400;
-  font-style: normal;
-  text-shadow: none;
-}
-
 #skills .skill-tabs {
   display: flex;
   justify-content: center;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   padding-bottom: 7px;
   border-bottom: 2px solid #2a2542; /* Deeper Violet Blue Tab Border */
 }
@@ -1093,11 +1084,13 @@ section {
   border-bottom: 3px solid transparent;
   margin-bottom: -2px;
   background-image: none;
+  border-radius: 30px;
 }
 
 #skills .skill-tabs button:hover {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.07); /* Slightly stronger hover background */
+  border-radius: 30px;
 }
 
 #skills .skill-tabs button.active {
@@ -1123,13 +1116,14 @@ section {
 
 #skills .skill-tabs button.active:hover {
   background-color: rgba(255, 255, 255, 0.07); /* Hover effect for active tab - Style 42 (same as 41) - keep hover background */
+  border-radius: 30px;
 }
 
 
 #skills .tab-content {
   display: none;
-  padding: 35px;
-  height: 580px;
+  padding: 20px;
+  height: 620px;
   overflow-y: auto;
   scroll-behavior: smooth;
 }
