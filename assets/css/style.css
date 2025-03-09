@@ -1030,7 +1030,7 @@ section {
   font-family: 'Nunito', sans-serif;
   padding: 10px;
   line-height: 1.7;
-
+  padding-bottom: 40px;
 }
 
 /* Middle Section - Deep Violet Blue Background */
@@ -1053,8 +1053,10 @@ section {
 }
 
 #skills .skills-header h2 {
+  font-size: 3rem;
+  text-align: center;
+  font-family: Georgia, serif;
   color: #ffffff; /* Light Header Text for deep violet blue background */
-  font-size: 2.9em;
   margin-bottom: 15px;
   font-weight: 700;
   letter-spacing: -1.7px;
@@ -1737,7 +1739,23 @@ section {
   box-shadow: 0 0 17px 2px rgb(0 0 0);
   transition: transform 0.3s ease-in-out;
   overflow: hidden;
+  animation: bouncep 5s ease-in-out infinite;
 }
+@keyframes bouncep {
+  0%, 100% {
+    transform: translateY(0); /* Start and end at original position and scale */
+  }
+  25% {
+    transform: translateY(-1px); /* Move up slightly  */
+  }
+  75% {
+    transform: translateY(1px); /* Move down slightly  */
+  }
+}
+.details-container:nth-child(1) { animation-delay: -1s; }
+.details-container:nth-child(2) { animation-delay: -2s; }
+.details-container:nth-child(3) { animation-delay: -3s; }
+
 /*
 .details-container:hover{
   transform: translateX(1px) translateY(-1px);
@@ -1756,7 +1774,7 @@ section {
   width: 0;
   height: 100%;
   background-color: rgb(24, 24, 24);
-  transition: width 0.4s ease-in-out;
+  transition: width 0.25s ease-in-out;
   z-index: -2;
   border-radius: 2rem; /* Specific border-radius set */
 }
@@ -1764,6 +1782,7 @@ section {
 .project-details-container .btn-color-2:hover::before {
   width: 100%;
 }
+
 
 /*Publications*/
 
