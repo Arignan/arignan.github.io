@@ -1822,7 +1822,8 @@ section {
   border-radius: 100px;
   flex-wrap: wrap ;
   margin: 20px;
-  box-shadow: inset 0 0 5px 0px rgb(0 0 0);
+  box-shadow: 0 0 15px 2px rgb(0 0 0);
+  background: azure;
 }
 
 .publication-filter li{
@@ -1830,13 +1831,13 @@ section {
   padding: 5px 20px;
   color: #000000;
   
-  font-size: 1rem;
+  font-size: 1.1rem;
   letter-spacing: 0.5px;
   font-weight: 400;
   cursor: pointer;
   user-select: none;
   border-radius: 100px;
-  box-shadow: 0 0 5px 1px rgb(0 0 0);
+  box-shadow: 0 0 6px 2px rgb(0 0 0);
   transition: background-color 0.3s ease-in-out;
 }
 
@@ -1856,36 +1857,55 @@ section {
   margin: auto;
   box-shadow: 0 0 15px 1px rgb(0 0 0);
   border-radius: 20px;
-  background-color: #9099b3c2;
+  background-color: #b0b5c3c2;
+  
+
 }
 .publication-box{
   width:330px;
   height: 380px;
-  padding: 10px;
-  border: 1px solid #000000;
+  
+  /*border: 1px solid #000000; */
   border-radius: 15px;
   margin: 20px;
-  box-shadow: 0 0 15px 1px rgb(39 39 39);
+  box-shadow: 0 0 10px 2px rgb(39 39 39);
+  overflow: hidden;
+  background-color: #6d989259;
+  display: block;
+  position: relative; /* For badge positioning */
+  
 }
 
 .publication-box img{
   width: 100%;
-  height: 250px;
+  height: 100%;
   border-radius: 10px;
   overflow: hidden;
+  display: block;
+  
 }
 
 .pub-title{
   text-align: center;
   font-size: 1.2rem;
   font-weight: 300;
-  color: #252525;
+  
+  background-color: rgba(0, 0, 0, 0.836); /* Dark overlay for title */
+  color: #fff;
+  
+  border-radius: 15px;
+  bottom: 30%;
+  left: 0;
+  position:relative;
+  z-index: 1;
+  margin: 8px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 
 
 .publication-container a{
-  transition: all 300ms ease;
+  transition: all 500ms ease;
 }
 
 .publication-container a {
@@ -1899,20 +1919,26 @@ section {
   color: grey;
   
   text-decoration-color: rgb(181, 181, 181);
-  transform: scale(1.05);
+  transform: scale(1);
 }
 
 
 .badge {
   position: absolute;
-  background-color: rgb(255, 255, 255, 0.6);
-  color: rgb(160, 6, 6);
+  background-color: rgb(231, 197, 0);
+  color: rgb(0, 0, 0);
   padding: 4px 8px;
   text-align: center;
   border-radius: 5px;
   font-weight: bold;
+  top: 10px;
+  left: 10px;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease;
 }
-
+.publication-box:hover .badge {
+  opacity: 1; /* Show title on hover */
+}
 /* CONTACT */
 
 #contact {
