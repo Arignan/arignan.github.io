@@ -1386,7 +1386,7 @@ section {
 .eduexp-container {
   padding: 2rem;
   background: #131b29;
-  border-radius: 100px;
+  border-radius: 50px;
   box-shadow: 0px 0px 20px 3px rgb(0 0 0);
   display: flex;
   flex-direction: column;
@@ -1781,9 +1781,16 @@ section {
 
 #Publications{
   position: relative;
+  /*
   background-color: #010527;
-  
-  box-shadow: 0 0 17px 3px rgb(0 0 0 / 93%);
+  box-shadow: 0 0 17px 3px rgb(0 0 0 / 93%);*/
+
+  background: url('/assets/img/Gemini.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 2rem;
 }
 .publititle{
   color: #ffffff;
@@ -1799,6 +1806,10 @@ section {
   display: flex;
   flex-direction: column;
   margin: 1rem 5rem;
+  background-color: #b9b9b991;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 3px rgb(0 0 0);
 }
 
 
@@ -1811,22 +1822,27 @@ section {
   border-radius: 100px;
   flex-wrap: wrap ;
   margin: 20px;
+  box-shadow: inset 0 0 5px 0px rgb(0 0 0);
 }
 
 .publication-filter li{
   margin: 10px;
   padding: 5px 20px;
-  color: #99a343;
+  color: #000000;
+  
   font-size: 1rem;
   letter-spacing: 0.5px;
   font-weight: 400;
   cursor: pointer;
   user-select: none;
+  border-radius: 100px;
+  box-shadow: 0 0 5px 1px rgb(0 0 0);
+  transition: background-color 0.3s ease-in-out;
 }
 
 
 .publication-filter-active{
-  background-color: #aaddc8;
+  background-color: #00ffd5;
   border-radius: 100px;
   color: #272727;
 }
@@ -1838,27 +1854,32 @@ section {
   flex-wrap: wrap;
   max-width: 1200px;
   margin: auto;
+  box-shadow: 0 0 15px 1px rgb(0 0 0);
+  border-radius: 20px;
+  background-color: #9099b3c2;
 }
 .publication-box{
   width:330px;
-  padding: 15px;
-  border: 1.5px solid #e4cfcf;
+  height: 380px;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 15px;
   margin: 20px;
- 
+  box-shadow: 0 0 15px 1px rgb(39 39 39);
 }
 
 .publication-box img{
   width: 100%;
-  height: 100%;
-  border-radius: 5px;
+  height: 250px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
 .pub-title{
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 300;
-  color: #ffffff;
+  color: #252525;
 }
 
 
