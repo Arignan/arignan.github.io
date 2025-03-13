@@ -461,29 +461,38 @@ section {
   
 }
 .intcont{
-  background-color: transparent;
+  background-color: #021038;
   border: none;
   border-radius: 40px;
-  box-shadow: 0 0 12px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: none;
   z-index: -1;
-  transition: transform 0.6s ease-out, box-shadow 0.3s ease; /* Smooth transitions */
-}
-.introtextcon{
+  transform: translate3d(0, 0, 0); /* Reset position */
+  transition: transform 0.6s ease-in-out, box-shadow 0.3s ease, background-color 0.6s ease-in-out; /* Smooth transitions */ 
   margin: 5px;
   margin-bottom: 15px;
+}
+.introtextcon{
   text-align: left;
   background-color:#000000;
   border-radius: 30px;
-  box-shadow: 0 0 5px 0px rgb(0 0 0 / 92%);
+  box-shadow: none;
   padding: 1rem;
   position: relative;
-  transition: transform 0.6s ease-out, box-shadow 0.3s ease; /* Smooth transitions */
+  transform: translate3d(0, 0, 0); /* Reset position */
+  transition: transform 0.6s ease-in-out, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
-.intcont:hover {
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
-  background-color:#00fff2;
+.intcont:hover{
+  transform: translate3d(5px, 5px, 0); /* Move down right slightly on hover */
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.7);
+  background-color: #032688;
 }
+.intcont:hover .introtextcon{
+  color: #00ff55;
+  transform: translate3d(-15px, -15px, 0); /* Move up left slightly on hover */
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
+}
+
 .introtextcon .introtextconem{
   font-style: italic;
   color: #0790eb;
