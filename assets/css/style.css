@@ -536,11 +536,11 @@ section {
   scale: 2;
 }
 .intcont:hover .thiraim{
-  transform: translate(-100px, 100px);
+  transform: translate(-150px, 100px);
   scale: 2;
 }
 .intcont:hover .foraim{
-  transform: translate(100px, 100px);
+  transform: translate(150px, 100px);
   scale: 2;
 }
 
