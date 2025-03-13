@@ -339,6 +339,7 @@ section {
 .section__text {
   align-self: center;
   text-align: center;
+  justify-items: center;
 }
 
 .section__text p {
