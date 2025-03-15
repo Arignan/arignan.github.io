@@ -2065,7 +2065,7 @@ section {
   height: 50px;
   outline: none;
   background-color: rgb(39 39 39);
-  border-radius: 20px;
+  border-radius: 15px;
   margin-bottom: 20px;
   font-size: 1rem;
   margin: 1rem;
@@ -2083,8 +2083,8 @@ section {
 }
 
 .contact-input:focus{
-  border: 2px solid #f0f0f0d0;
-  box-shadow: 0px 0px 10px 2px rgb(0, 0, 0);
+  border: 0.5px solid #f0f0f0d0;
+  box-shadow: 0px 0px 10px 1px rgb(0, 0, 0);
 }
 
 .contact-input::placeholder{
@@ -2102,14 +2102,16 @@ section {
   gap: 10px;
   border: none;
   border-radius: 50px;
-  background: radial-gradient(black,darkblue);
+  background: radial-gradient(#4d5d99, #000079);
   cursor: pointer;
   margin: 1rem;
+  transition:  box-shadow 1s ease-in-out;
 }
 
 .contact-left button:hover{
-  background: darkblue;
-  box-shadow: 0px 0px 10px 2px rgb(0 0 0 / 42%);
+  background: rgb(0, 0, 77);
+  box-shadow: 0px 0px 15px 2px rgb(0 0 0 / 42%);
+  
 }
 
 .contact-left button img{
