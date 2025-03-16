@@ -638,10 +638,10 @@ section {
   flex-direction: row;            /* Arrange items in a row */
   justify-content: flex-start;    /* Align items to the start (left) */
   align-items: flex-start;       /* Align items to the top */
-  gap: 2rem;
-  border: 3px solid rgb(255 255 255 / 56%);
+  gap: 1rem;
+  border: 1px solid rgb(255 255 255 / 32%);
   border-radius: 30px;
-  padding: 2rem;
+  padding: 1rem;
   background-color: #224ba54f;
 }
 .right-containers {                 /* Style for the new wrapper div */
