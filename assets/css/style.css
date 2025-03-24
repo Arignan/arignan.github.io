@@ -2107,20 +2107,39 @@ section {
   gap: 10px;
   border: none;
   border-radius: 50px;
-  background: radial-gradient(#4d5d99, #000079);
+  background: #609c00;
   cursor: pointer;
   margin: 1rem;
-  transition:  box-shadow 1s ease-in-out;
+  box-shadow: 0px 0px 5px 2px rgb(0 0 0 / 42%);
+  transition:  box-shadow 0.8s ease-in-out, background 0.8s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .contact-left button:hover{
   background: rgb(0, 0, 77);
   box-shadow: 0px 0px 15px 2px rgb(0 0 0 / 42%);
-  
+  transition: transform 0.5s ease-in-out, background 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
 }
 
 .contact-left button img{
-  height: 15px;
+  height: 20px;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.contact-left button:hover img{
+  transform: translateX(60px);
+  transition: transform 0.5s ease-in-out;
+  opacity: 1;
+}
+.contact-left button:hover h5{
+  color: transparent;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(-60px);
+}
+.contact-left button h5{
+  
+  transition: all 0.5s ease-in-out;
 }
 
 .contact-right{
@@ -2137,6 +2156,9 @@ section {
   margin: 1rem;
   width: 100%;
   font-size: 1.3rem;
+}
+.contact-right table tr td{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 tr td:first-child{
