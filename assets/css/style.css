@@ -371,6 +371,7 @@ section {
   background-color: white;
   border-radius: 40px;
   box-shadow: 9px 9px 3px 0px rgb(40 42 43 / 90%);
+  
   padding-bottom: 5px;
   color: #000077;
   transform-style: preserve-3d;
@@ -920,6 +921,7 @@ section {
   background-color: #003357; 
   border-radius: 20px;
   box-shadow: inset 0 0 5px 0px rgb(0 0 0 / 80%);
+  border: 1px solid #c9c9c9;
 }
 
 .project-card {
